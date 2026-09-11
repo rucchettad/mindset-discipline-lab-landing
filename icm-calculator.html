@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICM Calculator — Mindset & Discipline Lab</title>
+<meta name="description" content="Calcola l'equity del tuo stack in denaro reale con l'algoritmo Malmuth-Harville, poi simula il tuo call a un push di un avversario specifico: dal guadagno e dalla perdita di equity che ne risultano ricava Bubble Factor ed equity minima richiesta sotto ICM. Il tool serve per verificare eventuali proposte di deal al final table — confrontando ICM Deal, Chip Chop ed Equal Chop — e per capire se un call a un push sia vantaggioso.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand" style="text-decoration:none;">Mindset<span class="amp">&nbsp;&amp;&nbsp;</span>Discipline Lab</a>
+    <nav class="nav-links">
+      <a href="poker-range-preflop.html">Poker Range Preflop</a>
+      <a href="pko-calculator.html">PKO Calculator</a>
+      <a href="icm-calculator.html" class="active">ICM Calculator</a>
+      <a href="mystery-calculator.html">Mystery Calculator</a>
+      <a href="glossario.html">Glossario</a>
+    </nav>
+    <a class="nav-cta" href="https://pokerrange.online/app/">Accedi / Registrati</a>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="wrap">
+    <div class="page-header-grid">
+      <div>
+        <div class="breadcrumb"><a href="index.html">Home</a> / ICM Calculator</div>
+        <span class="eyebrow">CALCOLATORE ICM</span>
+        <h1>ICM Calculator</h1>
+        <p class="lead">Calcola l'equity del tuo stack in denaro reale con l'algoritmo <span class="gloss" tabindex="0">Malmuth-Harville<span class="gloss-tip">L'algoritmo matematico più diffuso per calcolare l'equity in denaro reale di uno stack, tenendo conto della probabilità di ogni possibile piazzamento finale.</span></span>, poi simula il tuo call a un push di un avversario specifico: dal guadagno e dalla perdita di equity che ne risultano ricava <span class="gloss" tabindex="0">Bubble Factor<span class="gloss-tip">Il rapporto tra quanto perderesti in equity se la mano andasse male e quanto guadagneresti se andasse bene. Più è alto, più devi essere cauto: significa che hai più da perdere che da guadagnare. Formula: Perdita di equity se perdi / Guadagno di equity se vinci.</span></span> ed equity minima richiesta sotto ICM. Il tool serve per verificare eventuali proposte di deal al <span class="gloss" tabindex="0">final table<span class="gloss-tip">L'ultimo tavolo di un torneo, quando restano pochi giocatori a contendersi i premi più alti.</span></span> — confrontando <span class="gloss" tabindex="0">ICM Deal<span class="gloss-tip">Un accordo per dividere il montepremi rimasto tra i giocatori del final table, basato sul valore ICM reale di ogni stack (non sulle chip pure).</span></span>, <span class="gloss" tabindex="0">Chip Chop<span class="gloss-tip">Un accordo per dividere il montepremi in proporzione diretta alle chip di ciascun giocatore, di solito con un minimo garantito pari all'ultimo premio pagato.</span></span> ed <span class="gloss" tabindex="0">Equal Chop<span class="gloss-tip">Un accordo per dividere il montepremi rimasto in parti uguali tra tutti i giocatori, indipendentemente da quante chip ha ciascuno.</span></span> — e per capire se un call a un push sia vantaggioso.</p>
+      </div>
+      <div class="page-header-price">
+      <div>
+        <div class="amount">7,99 € <span>/ mese</span></div>
+        <div class="sub">15 giorni di prova gratuita</div>
+        <div class="sub" style="margin-top:6px;color:var(--copper-bright);">Un solo abbonamento, tutti gli strumenti inclusi</div>
+      </div>
+      <a class="btn btn-primary" href="https://pokerrange.online/app/">Prova ora</a>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="calc-detail" style="border-top:none;">
+  <div class="wrap">
+    <div class="calc-detail-grid">
+      <div class="calc-detail-text">
+        <h2>Il valore reale delle chips cambia a seconda della situazione</h2>
+        <p>In bolla e a un <span class="gloss" tabindex="0">final table<span class="gloss-tip">L'ultimo tavolo di un torneo, quando restano pochi giocatori a contendersi i premi più alti.</span></span>, raddoppiare lo stack non significa raddoppiarne il valore monetario. Il calcolatore ICM traduce gli stack in equity monetaria usando l'algoritmo <span class="gloss" tabindex="0">Malmuth-Harville<span class="gloss-tip">L'algoritmo matematico più diffuso per calcolare l'equity in denaro reale di uno stack, tenendo conto della probabilità di ogni possibile piazzamento finale.</span></span>, per decisioni di call a un push che tengano conto della struttura premi e di tutte le possibili posizioni che ogni singolo player potrebbe raggiungere, non solo delle chips sul tavolo.</p>
+        <ol class="how-it-works">
+          <li>Inserisci seat, posizione e stack di tutti i giocatori rimasti (fino a 9), più la struttura premi del torneo — puoi anche importare direttamente la <span class="gloss" tabindex="0">Hand History<span class="gloss-tip">Il file di testo che registra i dettagli di una mano giocata (carte, puntate, stack), esportabile dal client della sala da gioco.</span></span></li>
+          <li>Il calcolatore ricava con l'algoritmo <span class="gloss" tabindex="0">Malmuth-Harville<span class="gloss-tip">L'algoritmo matematico più diffuso per calcolare l'equity in denaro reale di uno stack, tenendo conto della probabilità di ogni possibile piazzamento finale.</span></span> l'equity in denaro reale di ogni giocatore in base alla probabilità di ogni piazzamento possibile</li>
+          <li>Seleziona <span class="gloss" tabindex="0">Hero<span class="gloss-tip">Il giocatore dal cui punto di vista viene analizzata la mano — sei tu.</span></span> e <span class="gloss" tabindex="0">Villain<span class="gloss-tip">L'avversario con cui Hero si confronta nella mano analizzata.</span></span> per simulare un call a un push: ottieni equity dello stack prima e dopo la decisione, <span class="gloss" tabindex="0">Bubble Factor<span class="gloss-tip">Il rapporto tra quanto perderesti in equity se la mano andasse male e quanto guadagneresti se andasse bene. Più è alto, più devi essere cauto: significa che hai più da perdere che da guadagnare. Formula: Perdita di equity se perdi / Guadagno di equity se vinci.</span></span> ed equity minima richiesta in ICM.</li>
+        </ol>
+      </div>
+      <div class="calc-detail-shot">
+        <div class="screenshot-real"><img src="images/screenshot-icm-setup.png" alt="Calcolatore ICM — interfaccia app"></div>
+      </div>
+    </div>
+    <div class="calc-detail-grid" style="margin-top:24px;"><div class="screenshot-real"><img src="images/screenshot-icm-equity.png" alt="Calcolatore ICM — interfaccia app"></div>
+<div class="screenshot-real"><img src="images/screenshot-icm-full.png" alt="Calcolatore ICM — interfaccia app"></div></div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="brand">Mindset &amp; Discipline Lab</div>
+      <div class="fine">© <span id="year"></span> · Poker Range e gli strumenti di Mindset &amp; Discipline Lab</div>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox-overlay" id="lightboxOverlay">
+  <span class="lightbox-close">&times;</span>
+  <img id="lightboxImg" src="" alt="Screenshot ingrandito">
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const lightbox = document.getElementById('lightboxOverlay');
+  const lightboxImg = document.getElementById('lightboxImg');
+
+  document.querySelectorAll('.screenshot-real img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('active');
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });
+</script>
+</body>
+</html>

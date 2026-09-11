@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mystery Calculator — Mindset & Discipline Lab</title>
+<meta name="description" content="Calcola l'equity necessaria per il call a un push in un torneo Mystery Bounty.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand" style="text-decoration:none;">Mindset<span class="amp">&nbsp;&amp;&nbsp;</span>Discipline Lab</a>
+    <nav class="nav-links">
+      <a href="poker-range-preflop.html">Poker Range Preflop</a>
+      <a href="pko-calculator.html">PKO Calculator</a>
+      <a href="icm-calculator.html">ICM Calculator</a>
+      <a href="mystery-calculator.html" class="active">Mystery Calculator</a>
+      <a href="glossario.html">Glossario</a>
+    </nav>
+    <a class="nav-cta" href="https://pokerrange.online/app/">Accedi / Registrati</a>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="wrap">
+    <div class="page-header-grid">
+      <div>
+        <div class="breadcrumb"><a href="index.html">Home</a> / Mystery Calculator</div>
+        <span class="eyebrow">CALCOLATORE MYSTERY BOUNTY</span>
+        <h1>Mystery Calculator</h1>
+        <p class="lead">Calcola l'equity necessaria per il call a un push in un torneo Mystery Bounty.</p>
+      </div>
+      <div class="page-header-price">
+      <div>
+        <div class="amount">7,99 € <span>/ mese</span></div>
+        <div class="sub">15 giorni di prova gratuita</div>
+        <div class="sub" style="margin-top:6px;color:var(--copper-bright);">Un solo abbonamento, tutti gli strumenti inclusi</div>
+      </div>
+      <a class="btn btn-primary" href="https://pokerrange.online/app/">Prova ora</a>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="calc-detail" style="border-top:none;">
+  <div class="wrap">
+    <div class="calc-detail-grid">
+      <div class="calc-detail-text">
+        
+        <p>Nei Mystery Bounty il valore reale della taglia di ogni avversario resta sconosciuto finché non lo elimini. L'unico approccio percorribile è la bounty media: nel lungo periodo, è il valore su cui puoi fare affidamento.</p>
+        <ol class="how-it-works">
+          <li>Inserisci stack iniziale del torneo, il tuo stack e la quota mystery del buy-in. Poi indica la bounty media direttamente in €, oppure lascia che il calcolatore la ricavi da bounty totali in gioco e giocatori rimasti</li>
+          <li>Aggiungi lo stack di ogni Villain nel piatto (fino a 3), inserisci la somma di BB, SB e Ante ed eventuali altre chips nel pot prima del call di Hero (eventuali flat o limp), e specifica se ti trovi in Small Blind o Big Blind</li>
+          <li>Ottieni pot odds base e pot odds modificate dal valore della bounty, con lo sconto che ne risulta — puoi anche aggiungere manualmente un Risk Premium ICM opzionale per affinare ulteriormente l'equity finale richiesta</li>
+        </ol>
+      </div>
+      <div class="calc-detail-shot">
+        <div class="screenshot-real" style="margin-bottom:16px;"><img src="images/screenshot-mystery-full.png" alt="Calcolatore Mystery Bounty — interfaccia app"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="brand">Mindset &amp; Discipline Lab</div>
+      <div class="fine">© <span id="year"></span> · Poker Range e gli strumenti di Mindset &amp; Discipline Lab</div>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox-overlay" id="lightboxOverlay">
+  <span class="lightbox-close">&times;</span>
+  <img id="lightboxImg" src="" alt="Screenshot ingrandito">
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const lightbox = document.getElementById('lightboxOverlay');
+  const lightboxImg = document.getElementById('lightboxImg');
+
+  document.querySelectorAll('.screenshot-real img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('active');
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });
+</script>
+</body>
+</html>
