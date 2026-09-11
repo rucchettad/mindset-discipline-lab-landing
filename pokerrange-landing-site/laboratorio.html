@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Il Laboratorio — Mindset & Discipline Lab</title>
+<meta name="description" content="Tutti gli strumenti di Mindset & Discipline Lab: Poker Range Preflop, PKO, Mystery Bounty e ICM Calculator, più i prossimi moduli mentali in arrivo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand" style="text-decoration:none;">Mindset<span class="amp">&nbsp;&amp;&nbsp;</span>Discipline Lab</a>
+    <nav class="nav-links">
+      <a href="laboratorio.html" class="active">Il laboratorio</a>
+      <a href="poker-range-preflop.html">Poker Range Preflop</a>
+      <a href="pko-calculator.html">PKO Calculator</a>
+      <a href="icm-calculator.html">ICM Calculator</a>
+      <a href="mystery-calculator.html">Mystery Calculator</a>
+    </nav>
+    <a class="nav-cta" href="https://pokerrange.online/app/">Accedi</a>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="wrap">
+    <span class="eyebrow">IL LABORATORIO</span>
+    <h1>Tutti gli strumenti, in un solo posto</h1>
+    <p class="lead">Ogni strumento affronta un pezzo diverso del gioco: dalle range preflop ai calcolatori per le decisioni più delicate a MTT. Clicca su uno strumento per vedere come funziona nel dettaglio.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="lab-grid" style="grid-template-columns:repeat(2,1fr);">
+      <div class="lab-card active">
+        <span class="status live">Disponibile ora</span>
+        <h3>Poker Range Preflop</h3>
+        <p>Range GTO preflop per ogni posizione e profondità di stack, dalle aperture alle situazioni di 3bet e 4bet. La base di ogni decisione corretta a MTT.</p>
+        <a class="go" href="poker-range-preflop.html">Scopri lo strumento →</a>
+      </div>
+      <div class="lab-card active">
+        <span class="status live">Disponibile ora</span>
+        <h3>PKO Calculator</h3>
+        <p>Bounty investment e Bounty Factor per decisioni ICM-aware nei tornei Progressive KO.</p>
+        <a class="go" href="pko-calculator.html">Scopri lo strumento →</a>
+      </div>
+      <div class="lab-card active">
+        <span class="status live">Disponibile ora</span>
+        <h3>Mystery Calculator</h3>
+        <p>Equity corretta su rischio e reward variabile, per le spot dove la bounty non è mai certa.</p>
+        <a class="go" href="mystery-calculator.html">Scopri lo strumento →</a>
+      </div>
+      <div class="lab-card active">
+        <span class="status live">Disponibile ora</span>
+        <h3>ICM Calculator</h3>
+        <p>Algoritmo Malmuth-Harville per le decisioni che contano davvero: in bolla e al final table.</p>
+        <a class="go" href="icm-calculator.html">Scopri lo strumento →</a>
+      </div>
+      <div class="lab-card">
+        <span class="status soon">In arrivo</span>
+        <h3>Mental Game Check</h3>
+        <p>Un check-up per individuare dove il tuo gioco perde equity fuori dal tavolo: tilt, disciplina, gestione della varianza.</p>
+      </div>
+      <div class="lab-card placeholder">
+        <p>Prossimo modulo<br>in lavorazione</p>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="brand">Mindset &amp; Discipline Lab</div>
+      <div class="fine">© <span id="year"></span> · Poker Range e i prossimi strumenti del laboratorio</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
