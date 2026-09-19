@@ -68,6 +68,16 @@
     white-space:nowrap; flex-shrink:0;
   }
   .nav-cta:hover{ border-color:var(--copper); }
+  /* Accedi + Registrati affiancati */
+  .nav-ctas{ display:flex; align-items:center; gap:10px; flex-shrink:0; }
+  .nav-cta-primary{ background:var(--copper); border-color:var(--copper); color:#1a1006; font-weight:600; }
+  .nav-cta-primary:hover{ background:var(--copper-bright); border-color:var(--copper-bright); }
+  @media (max-width:480px){
+    .nav-inner{ padding:14px 16px; gap:12px; }
+    .nav-ctas{ gap:8px; }
+    .nav-cta{ padding:8px 11px; font-size:12px; }
+    .brand{ font-size:15px; flex-shrink:1; min-width:0; flex-wrap:wrap; line-height:1.2; }
+  }
   @media (max-width:1060px){ .nav-links{display:none;} }
   .nav-links a.active{ color:var(--copper-bright); }
 
