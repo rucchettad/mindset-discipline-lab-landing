@@ -331,3 +331,14 @@
     font-family:'Inter',sans-serif; text-align:left; white-space:normal; font-weight:400;
   }
   .gloss-pill:hover .gloss-tip, .gloss-pill:focus .gloss-tip{ visibility:visible; opacity:1; }
+
+  /* Telefono: le spiegazioni dei termini si aprono in basso, dentro lo schermo,
+     invece che sopra la parola (dove uscivano dal bordo e facevano scorrere la pagina di lato) */
+  @media (max-width:780px){
+    .gloss .gloss-tip, .gloss-pill .gloss-tip{
+      position:fixed; left:16px; right:16px; bottom:16px; top:auto;
+      transform:none; width:auto; max-width:none;
+      font-size:14px; z-index:1000;
+    }
+    .gloss .gloss-tip::after{ display:none; }
+  }
