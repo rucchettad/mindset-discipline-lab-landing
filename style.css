@@ -341,4 +341,5 @@
       font-size:14px; z-index:1000;
     }
     .gloss .gloss-tip::after{ display:none; }
+    .gloss-nascondi .gloss-tip{ visibility:hidden !important; opacity:0 !important; }
   }
