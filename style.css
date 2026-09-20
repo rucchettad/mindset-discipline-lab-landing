@@ -110,7 +110,26 @@
   .page-header-price .btn{ width:100%; text-align:center; }
 
   /* HERO */
-  .hero{ padding:96px 0 90px; }
+  .hero{ padding:96px 0 90px; position:relative; overflow:hidden; }
+  .hero > .wrap{ position:relative; z-index:1; }
+  /* Grafico con la frase sullo sfondo della home (solo da PC) */
+  .hero-grafico{
+    /* asse orizzontale allineato alla riga "2.000+ range preflop": il grafico è alto metà della sua larghezza,
+       l'asse sta a 80/420 dal fondo del disegno, la riga termina a 90px dal fondo della sezione */
+    position:absolute; left:calc(50% + 150px); width:calc(50vw - 166px); height:calc((50vw - 166px) / 2);
+    bottom:calc(90px - (50vw - 166px) * 0.0952); pointer-events:none;
+    -webkit-mask-image:linear-gradient(90deg, rgba(0,0,0,0.7) 0%, #000 12%);
+            mask-image:linear-gradient(90deg, rgba(0,0,0,0.7) 0%, #000 12%);
+  }
+  .hero-grafico .g{ stroke:#e6eef7; stroke-opacity:0.045; }
+  .hero-grafico .t{ stroke:#e6eef7; stroke-opacity:0.22; }
+  .hero-grafico .a{ stroke:#e6eef7; stroke-opacity:0.25; stroke-width:1.3; }
+  .hero-grafico .n{ font-family:'DM Sans',sans-serif; font-size:12px; fill:#a9b4c2; fill-opacity:0.35; }
+  .hero-grafico .frase{ font-family:'DM Serif Display',Georgia,serif; font-style:italic; }
+  .hero-grafico .v{ fill:#a9b4c2; fill-opacity:0.42; }
+  .hero-grafico .d{ fill:#58a6ff; fill-opacity:0.65; }
+  .hero-grafico .dd{ fill:#8ec5ff; fill-opacity:0.95; }
+  @media (max-width:1060px){ .hero-grafico{ display:none; } }
   .hero-single{ max-width:760px; }
   .eyebrow{
     font-family:'DM Sans', monospace; font-size:12.5px; letter-spacing:0.08em;
