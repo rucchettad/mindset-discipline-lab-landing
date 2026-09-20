@@ -62,7 +62,8 @@
   .section-head.con-hub{ position:relative; max-width:none; }
   .section-head.con-hub > h2, .section-head.con-hub > p, .section-head.con-hub > .eyebrow{ max-width:640px; }
   .tools-ill{
-    position:absolute; right:0; top:50%; transform:translateY(-50%); pointer-events:none;
+    /* stesso margine destro (28px) e stessa distanza dal testo (~100px) del percorso a tappe */
+    position:absolute; right:-12px; top:50%; transform:translateY(-50%); pointer-events:none;
     width:clamp(0px, calc(100vw - 860px), 440px);
   }
   .tools-ill svg{ display:block; width:100%; height:auto; }
