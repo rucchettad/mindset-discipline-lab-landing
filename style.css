@@ -402,3 +402,7 @@
   /* 3. Etichette */
   .status, .feature .tag, .calc-mock-head{ font-size:12px; }
   .statement-close{ font-size:16.5px !important; }
+
+  /* Menu con lo stesso carattere dei titoli (23/09/2026) */
+  .nav-links{ font-family:'DM Serif Display', Georgia, serif; font-size:14px; }
+  @media (min-width:1200px){ .nav-links{ font-size:16px; } }
