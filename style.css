@@ -401,3 +401,4 @@
   .lab-card .go, .price-strip .sub, footer .fine{ font-size:13.5px; }
   /* 3. Etichette */
   .status, .feature .tag, .calc-mock-head{ font-size:12px; }
+  .statement-close{ font-size:16.5px !important; }
