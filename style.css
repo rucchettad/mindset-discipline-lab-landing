@@ -382,3 +382,10 @@
     .gloss .gloss-tip::after{ display:none; }
     .gloss-nascondi .gloss-tip{ visibility:hidden !important; opacity:0 !important; }
   }
+
+  /* Menu più grande su desktop (23/09/2026) */
+  @media (min-width:1200px){
+    .brand{ font-size:19px; }
+    .nav-links{ font-size:15px; gap:20px; }
+    .nav-cta{ font-size:14px; }
+  }
