@@ -93,7 +93,7 @@
       <p>Il servizio è riservato ai maggiorenni. Non raccogliamo consapevolmente dati di persone con meno di 18 anni: se ci accorgiamo di averli ricevuti, li cancelliamo.</p>
 
       <h2>Cookie</h2>
-      <p>Il sito e l'app non usano cookie di profilazione, pubblicitari o di statistica, né strumenti di analisi del traffico. Per mantenerti collegato all'app usiamo solo dati tecnici salvati nel tuo browser. Il pagamento avviene sulla pagina di Stripe, che applica la propria informativa.</p>
+      <p>Il sito e l'app non usano cookie di profilazione, pubblicitari o di statistica. Contiamo solo, in forma anonima, quante volte viene aperta ogni pagina e usato ogni strumento: senza cookie e senza salvare dati che ti identificano. Per mantenerti collegato all'app usiamo solo dati tecnici salvati nel tuo browser. Il pagamento avviene sulla pagina di Stripe, che applica la propria informativa.</p>
 
       <p class="legal-updated">Ultimo aggiornamento: 20 ottobre 2026</p>
     </div>
@@ -114,5 +114,7 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+<!-- Conteggio anonimo delle aperture della pagina: niente cookie, niente dati personali -->
+<script>try{navigator.sendBeacon('https://poker-range-api-production.up.railway.app/api/visita/'+(location.pathname.split('/').pop().replace('.html','')||'index'))}catch(e){}</script>
 </body>
 </html>
