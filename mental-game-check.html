@@ -17,9 +17,10 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="style.css?v=20260923f">
 <style>
-  /* Sezioni senza schermata: il testo occupa tutta la riga (quando arrivano le schermate si toglie) */
+  /* Sezioni senza schermata: il testo occupa tutta la riga, paragrafi larghi come gli elenchi */
   .calc-detail-grid.solo-testo{ grid-template-columns:1fr; }
   .calc-detail-grid.solo-testo .calc-detail-text{ max-width:760px; }
+  .calc-detail-grid.solo-testo .calc-detail-text p{ max-width:none; }
 </style>
 </head>
 <body>
@@ -48,7 +49,7 @@
         <div class="breadcrumb"><a href="index.html">Home</a> / Mental Game Check</div>
         <span class="eyebrow">MENTAL GAME</span>
         <h1>Mental Game Check</h1>
-        <p class="lead">Prepara la sessione, resta lucido mentre giochi, analizza com'è andata.</p>
+        <p class="lead">Prepara la sessione, resta lucido mentre giochi, analizza com'è andata. Il Mental Game Check trasforma il tuo stato mentale in decisioni concrete: quanti tavoli aprire, quando rallentare, cosa correggere la volta dopo.</p>
       </div>
       <div class="page-header-price">
       <div>
@@ -66,23 +67,71 @@
   <div class="wrap">
     <div class="calc-detail-grid solo-testo">
       <div class="calc-detail-text">
-        <h2>Come funziona</h2>
-        <p>Uno strumento di Poker Range per gestire la parte mentale dei tornei: quanto sei pronto oggi, quanti tavoli aprire, quando rallentare o fermarti. Non è una valutazione psicologica né una terapia.</p>
+        <h2>Perché serve</h2>
+        <p>Nei tornei la varianza non la controlli. Puoi controllare con che testa ti siedi al tavolo, quante sessioni giochi stanco o arrabbiato e quante volte rompi le regole che ti eri dato. Il Mental Game Check ti aiuta a farlo ogni giorno, in pochi minuti: prima, durante e dopo la sessione. Non è una valutazione psicologica né una terapia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="calc-detail">
+  <div class="wrap">
+    <div class="calc-detail-grid">
+      <div class="calc-detail-text">
+        <h2>Pre-sessione: prima di sederti al tavolo</h2>
+        <p>Rispondi a 10 domande da 1 a 5 su come stai oggi: sonno, stato emotivo, eliminazioni dei giorni scorsi e altro. Indica quanti tavoli giochi di solito contemporaneamente e premi Calcola. Vedi la tua preparazione mentale in percentuale, quanti tavoli giocare oggi e i consigli per le aree con più margine di crescita. In cima trovi la cosa da correggere che hai scelto alla fine della sessione precedente.</p>
+      </div>
+      <div class="calc-detail-shot">
+        <div class="screenshot-real"><img src="images/screenshot-mental-pre-2.png" alt="Mental Game Check — Pre-sessione" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="calc-detail">
+  <div class="wrap">
+    <div class="calc-detail-grid reverse">
+      <div class="calc-detail-text">
+        <h2>In sessione: mentre giochi</h2>
         <ol class="how-it-works">
-          <li><strong>Pre-sessione</strong>: 10 domande da 1 a 5 su come stai oggi: sonno, stato emotivo, eliminazioni dei giorni scorsi e altro. Ottieni la tua preparazione mentale in percentuale, quanti tavoli giocare oggi e i consigli per le aree con più margine di crescita.</li>
-          <li><strong>In sessione</strong>: le tue regole di oggi (orario di stop, limite di spesa, frase di riferimento), un controllo in pausa con semaforo (continua, rallenta, fermati), il diario delle credenze e una respirazione guidata prima del tavolo finale.</li>
-          <li><strong>Post-sessione</strong>: valuti se hai rispettato le regole e giudichi la qualità del tuo gioco separata dal risultato. Poi scegli una sola cosa da correggere, che ritrovi nella sessione successiva.</li>
-          <li><strong>Diario</strong>: le tue sessioni giorno per giorno. Dopo 5 sessioni vedi le tendenze: il trigger più frequente, la preparazione media, quanto rispetti le regole e se il giudizio sul tuo gioco segue il risultato.</li>
+          <li><strong>Le tue regole di oggi</strong>: l'orario dopo il quale non ti registri a nuovi tornei, il limite di spesa e la tua frase di riferimento. Restano salvati per le sessioni successive. Il limite di tavoli arriva dalla Pre-sessione e cambia ogni giorno.</li>
+          <li><strong>Controllo in pausa</strong>: a ogni pausa sincronizzata rispondi a 3 domande e un semaforo ti dice se continuare, rallentare o fermarti.</li>
+          <li><strong>Diario delle credenze</strong>: quando ti viene un pensiero come «questa room è truccata», lo scrivi subito e poi lo confronti con i dati reali.</li>
+          <li><strong>Tavolo finale e eliminazioni</strong>: respirazione e promemoria per arrivare lucido al tavolo finale, e cosa fare dopo un'eliminazione che ti brucia.</li>
         </ol>
       </div>
-      <!-- Schermate: quando ci sono, togliere "solo-testo" qui sopra e attivare questo blocco
       <div class="calc-detail-shot">
-        <div class="screenshot-real" style="margin-bottom:16px;"><img src="images/screenshot-mental-pre.png" alt="Mental Game Check — Pre-sessione"></div>
-        <div class="screenshot-real" style="margin-bottom:16px;"><img src="images/screenshot-mental-in.png" alt="Mental Game Check — In sessione"></div>
-        <div class="screenshot-real" style="margin-bottom:16px;"><img src="images/screenshot-mental-post.png" alt="Mental Game Check — Post-sessione"></div>
-        <div class="screenshot-real"><img src="images/screenshot-mental-diario.png" alt="Mental Game Check — Diario"></div>
+        <div class="screenshot-real" style="margin-bottom:16px;"><img src="images/screenshot-mental-in-1.png" alt="Mental Game Check — regole di oggi e controllo in pausa" loading="lazy"></div>
+        <div class="screenshot-real"><img src="images/screenshot-mental-in-2.png" alt="Mental Game Check — diario delle credenze e tavolo finale" loading="lazy"></div>
       </div>
-      -->
+    </div>
+  </div>
+</section>
+
+<section class="calc-detail">
+  <div class="wrap">
+    <div class="calc-detail-grid">
+      <div class="calc-detail-text">
+        <h2>Post-sessione: a fine sessione</h2>
+        <p>Indichi se hai rispettato le regole e giudichi la qualità del tuo gioco separata dal risultato. Segni cosa ti ha disturbato e scegli una sola cosa da correggere, che ritrovi in cima alla prossima Pre-sessione. Con Salva nel diario chiudi la sessione.</p>
+      </div>
+      <div class="calc-detail-shot">
+        <div class="screenshot-real"><img src="images/screenshot-mental-post-1.png" alt="Mental Game Check — Post-sessione" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="calc-detail">
+  <div class="wrap">
+    <div class="calc-detail-grid reverse">
+      <div class="calc-detail-text">
+        <h2>Diario: le tue tendenze</h2>
+        <p>Le tue sessioni e le tue credenze, giorno per giorno. Dopo almeno 5 sessioni vedi le tendenze: il trigger più frequente, la preparazione media, quanto rispetti le regole e se il giudizio sul tuo gioco segue il risultato, cioè se giudichi di aver giocato bene solo quando vinci.</p>
+      </div>
+      <div class="calc-detail-shot">
+        <div class="screenshot-real"><img src="images/screenshot-mental-diario.png" alt="Mental Game Check — Diario" loading="lazy"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -93,6 +142,7 @@
       <div class="calc-detail-text">
         <h2>I tuoi dati</h2>
         <p>Le risposte restano nel tuo browser. Per calcolare punteggi e tendenze, al server arrivano solo i numeri necessari, senza le tue note, e non vengono salvati. Puoi scaricare una copia del diario o esportarlo in Excel per il tuo mental coach.</p>
+        <p style="margin-top:22px;font-style:italic;">Creato da Danilo Rucchetta, giocatore professionista di MTT e mental coach sportivo certificato.</p>
       </div>
     </div>
   </div>
