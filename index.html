@@ -74,6 +74,10 @@
     bottom:calc(90px - min(440px, calc(50vw - 165px)) * 0.10667);
     overflow:visible; -webkit-mask-image:none; mask-image:none;
   }
+  /* Riquadri sotto i pulsanti: da PC su righe da 3, così restano a sinistra del grafico (25/10/2026) */
+  @media (min-width:1061px){
+    .hero-meta{ display:grid; grid-template-columns:repeat(3, max-content); column-gap:28px; row-gap:20px; }
+  }
   /* TABLET (601-1060px): il grafico va sotto i pulsanti, centrato e a larghezza piena */
   @media (min-width:601px) and (max-width:1060px){
     .hero{ display:flex; flex-direction:column; }
