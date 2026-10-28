@@ -420,3 +420,29 @@
   /* Menu con lo stesso carattere dei titoli (23/09/2026) */
   .nav-links{ font-family:'DM Serif Display', Georgia, serif; font-size:14px; }
   @media (min-width:1200px){ .nav-links{ font-size:16px; } }
+
+  /* Menu a tendina «Poker Tools» (28/10/2026): si apre al passaggio del mouse o al clic */
+  .nav-links{ align-items:center; }
+  .nav-drop{ position:relative; }
+  .nav-drop-btn{
+    background:none; border:0; padding:0; margin:0; cursor:pointer;
+    font:inherit; color:inherit; white-space:nowrap; transition:color .15s;
+  }
+  .nav-drop-btn:hover, .nav-drop:focus-within .nav-drop-btn{ color:var(--paper); }
+  .nav-drop-btn.active{ color:var(--copper-bright); }
+  .nav-drop-freccia{ font-size:.75em; margin-left:2px; display:inline-block; transition:transform .15s; }
+  .nav-drop-menu{
+    visibility:hidden; opacity:0; position:absolute; top:100%; left:-14px; padding-top:12px;
+    transition:opacity .15s, visibility .15s; z-index:50;
+  }
+  .nav-drop-menu::before{
+    content:''; position:absolute; inset:12px 0 0 0; z-index:-1;
+    background:var(--ink-panel); border:1px solid var(--wire); border-radius:10px;
+    box-shadow:0 12px 32px rgba(0,0,0,0.5);
+  }
+  .nav-drop-menu a{ display:block; padding:9px 16px; white-space:nowrap; }
+  .nav-drop-menu a:first-child{ margin-top:6px; }
+  .nav-drop-menu a:last-child{ margin-bottom:6px; }
+  .nav-drop-menu a:hover{ background:rgba(31,111,235,0.12); }
+  .nav-drop:hover .nav-drop-menu, .nav-drop:focus-within .nav-drop-menu{ visibility:visible; opacity:1; }
+  .nav-drop:hover .nav-drop-freccia, .nav-drop:focus-within .nav-drop-freccia{ transform:rotate(180deg); }

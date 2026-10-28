@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="style.css?v=20260923f">
+<link rel="stylesheet" href="style.css?v=20261028">
 <style>
   /* Sezioni senza schermata: il testo occupa tutta la riga, paragrafi larghi come gli elenchi */
   .calc-detail-grid.solo-testo{ grid-template-columns:1fr; }
@@ -29,9 +29,14 @@
     <a href="index.html" class="brand" style="text-decoration:none;">Mindset<span class="amp">&nbsp;&amp;&nbsp;</span>Discipline Lab</a>
     <nav class="nav-links">
       <a href="poker-range-preflop.html">Poker Range Preflop</a>
-      <a href="pko-calculator.html">PKO Calculator</a>
-      <a href="icm-calculator.html">ICM Calculator</a>
-      <a href="mystery-calculator.html">Mystery Calculator</a>
+      <div class="nav-drop">
+        <button type="button" class="nav-drop-btn" aria-haspopup="true">Poker Tools <span class="nav-drop-freccia" aria-hidden="true">▾</span></button>
+        <div class="nav-drop-menu">
+          <a href="pko-calculator.html">PKO Calculator</a>
+          <a href="mystery-calculator.html">Mystery Bounty Calculator</a>
+          <a href="icm-calculator.html">ICM Calculator</a>
+        </div>
+      </div>
       <a href="mental-game-check.html" class="active">Mental Game Check</a>
       <a href="glossario.html">Glossario</a>
     </nav>
