@@ -21,6 +21,7 @@
   + '@media (max-width:1060px){'
   +   '.mm-btn{display:inline-flex;}'
   +   '.nav-ctas .nav-cta:not(.nav-cta-primary){display:none;}'
+  +   '.nav-ctas .nav-drop-cta:first-child{display:none;}'
   +   '.mm-aperto .mm-pannello{display:block;}'
   +   '.mm-pannello{position:absolute;left:0;right:0;top:100%;'
   +     'background:#090b10;border-bottom:1px solid var(--wire);'
@@ -89,15 +90,20 @@
       lista.appendChild(wrap);
     }
   });
-  var accedi = ctas.querySelector('.nav-cta:not(.nav-cta-primary)');
-  if(accedi){
-    var box = document.createElement('div');
-    box.className = 'mm-accedi';
-    var a2 = link(accedi, 'mm-accedi-link');
-    a2.target = '_blank'; a2.rel = 'noopener';
-    box.appendChild(a2);
-    lista.appendChild(box);
-  }
+  /* 21/11/2026: Accedi e Registrati sono a tendina (due app): nel menu ☰ diventano due gruppi */
+  ctas.querySelectorAll('.nav-drop-cta').forEach(function(dd){
+    var b = dd.querySelector('.nav-drop-btn');
+    var g = document.createElement('div');
+    g.className = 'mm-gruppo';
+    g.textContent = b ? b.childNodes[0].textContent.trim() : '';
+    lista.appendChild(g);
+    var wrap = document.createElement('div');
+    wrap.className = 'mm-gruppo-fine';
+    dd.querySelectorAll('.nav-drop-menu a').forEach(function(a){
+      var n = link(a, 'mm-sotto'); n.target = '_blank'; n.rel = 'noopener'; wrap.appendChild(n);
+    });
+    lista.appendChild(wrap);
+  });
   header.appendChild(pannello);
 
   function apri(si){
@@ -115,4 +121,19 @@
   });
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape') apri(false); });
   window.addEventListener('resize', function(){ if(window.innerWidth > 1060) apri(false); });
+  /* Tendine di Accedi e Registrati: si aprono anche con un tocco (sul telefono il passaggio del mouse non c'è) */
+  var tendine = ctas.querySelectorAll('.nav-drop-cta');
+  tendine.forEach(function(dd){
+    var b = dd.querySelector('.nav-drop-btn');
+    if(!b) return;
+    b.addEventListener('click', function(e){
+      e.stopPropagation();
+      var era = dd.classList.contains('aperto');
+      tendine.forEach(function(x){ x.classList.remove('aperto'); });
+      if(!era){ dd.classList.add('aperto'); apri(false); }
+    });
+  });
+  document.addEventListener('click', function(e){
+    tendine.forEach(function(x){ if(!x.contains(e.target)) x.classList.remove('aperto'); });
+  });
 })();

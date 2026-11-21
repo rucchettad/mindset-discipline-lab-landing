@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="style.css?v=20261028">
+<link rel="stylesheet" href="style.css?v=20261121">
 <style>
   /* Sezioni senza schermata: il testo occupa tutta la riga, paragrafi larghi come gli elenchi */
   .calc-detail-grid.solo-testo{ grid-template-columns:1fr; }
@@ -28,6 +28,7 @@
   <div class="nav-inner">
     <a href="index.html" class="brand" style="text-decoration:none;">Mindset<span class="amp">&nbsp;&amp;&nbsp;</span>Discipline Lab</a>
     <nav class="nav-links">
+      <a href="mental-game-check.html" class="active">Mental Game Check</a>
       <a href="poker-range-preflop.html">Poker Range Preflop</a>
       <div class="nav-drop">
         <button type="button" class="nav-drop-btn" aria-haspopup="true">Poker Tools <span class="nav-drop-freccia" aria-hidden="true">▾</span></button>
@@ -37,12 +38,18 @@
           <a href="icm-calculator.html">ICM Calculator</a>
         </div>
       </div>
-      <a href="mental-game-check.html" class="active">Mental Game Check</a>
       <a href="glossario.html">Glossario</a>
     </nav>
+    <!-- 21/11/2026: due app, ognuna con il suo account → Accedi e Registrati a tendina (sempre prima Mental Game Check) -->
     <div class="nav-ctas">
-      <a class="nav-cta" href="https://pokerrange.online/" target="_blank" rel="noopener">Accedi</a>
-      <a class="nav-cta nav-cta-primary" href="https://pokerrange.online/?registrati" target="_blank" rel="noopener">Registrati</a>
+      <div class="nav-drop nav-drop-cta">
+        <button type="button" class="nav-cta nav-drop-btn" aria-haspopup="true">Accedi <span class="nav-drop-freccia" aria-hidden="true">▾</span></button>
+        <div class="nav-drop-menu"><a href="https://mentalgamecheck.com/" target="_blank" rel="noopener">Mental Game Check</a><a href="https://pokerrange.online/" target="_blank" rel="noopener">Poker Range</a></div>
+      </div>
+      <div class="nav-drop nav-drop-cta">
+        <button type="button" class="nav-cta nav-cta-primary nav-drop-btn" aria-haspopup="true">Registrati <span class="nav-drop-freccia" aria-hidden="true">▾</span></button>
+        <div class="nav-drop-menu"><a href="https://mentalgamecheck.com/accesso.html?registrati" target="_blank" rel="noopener">Mental Game Check</a><a href="https://pokerrange.online/?registrati" target="_blank" rel="noopener">Poker Range</a></div>
+      </div>
     </div>
   </div>
 </header>
@@ -54,16 +61,16 @@
         <div class="breadcrumb"><a href="index.html">Home</a> / Mental Game Check</div>
         <span class="eyebrow">MENTAL GAME</span>
         <h1>Mental Game Check</h1>
-        <p class="lead">Prepara la sessione, resta lucido mentre giochi, analizza com'è andata. Il Mental Game Check trasforma il tuo stato mentale in decisioni concrete: quanti tavoli aprire, quando rallentare, cosa correggere la volta dopo.</p>
+        <p class="lead">Prima di giocare, nelle pause e alla fine: pochi minuti per riconoscere come stai. Così scegli quanto giocare oggi e porti nella prossima sessione quello che hai imparato.</p>
       </div>
       <div class="page-header-price">
       <div>
         <div class="amount">9,99 € <span>/ mese</span></div>
         <div class="sub">15 giorni di prova gratuita</div>
-        <div class="sub" style="margin-top:6px;color:var(--copper-bright);">Un solo abbonamento, tutti gli strumenti inclusi</div>
-        <div class="sub" style="margin-top:4px;">Guida in ogni strumento, con esempi</div>
+        <div class="sub" style="margin-top:6px;color:var(--copper-bright);">App a sé, separata da Poker Range</div>
+        <div class="sub" style="margin-top:4px;">Si usa dal telefono e dal computer</div>
       </div>
-      <a class="btn btn-primary" href="https://pokerrange.online/?registrati" target="_blank" rel="noopener">Prova ora</a>
+      <a class="btn btn-primary" href="https://mentalgamecheck.com/accesso.html?registrati" target="_blank" rel="noopener">Prova gratis</a>
     </div>
     </div>
   </div>
@@ -74,7 +81,7 @@
     <div class="calc-detail-grid solo-testo">
       <div class="calc-detail-text">
         <h2>Perché serve</h2>
-        <p>Nei tornei la varianza non la controlli. Puoi controllare con quale stato mentale ti siedi al tavolo, quante sessioni giochi stanco o arrabbiato e quante volte rompi le regole che ti eri dato. Il Mental Game Check ti aiuta a farlo ogni giorno, in pochi minuti: prima, durante e dopo la sessione. Non giocare non ti fa perdere niente. Giocare senza le condizioni giuste ti costa: per questo, quando non sei pronto, il Mental Game Check ti dice di non sederti. Non è una valutazione psicologica né una terapia.</p>
+        <p>Nei tornei la varianza non dipende da te. Come arrivi al tavolo e come rispondi a quello che succede, invece, si può allenare. La stanchezza, una bad beat che pesa ancora, la voglia di recuperare: possono entrare nelle decisioni senza fare rumore. Il Mental Game Check ti aiuta a riconoscerle in tempo, sessione dopo sessione. È uno strumento di autovalutazione per il gioco: non è una valutazione psicologica né una terapia.</p>
       </div>
     </div>
   </div>
@@ -84,11 +91,11 @@
   <div class="wrap">
     <div class="calc-detail-grid">
       <div class="calc-detail-text">
-        <h2>Pre-sessione: prima di sederti al tavolo</h2>
-        <p>Rispondi a 10 domande da 1 a 5 su come stai oggi: sonno, stato emotivo, eliminazioni dei giorni scorsi e altro. Indica quanti tavoli giochi di solito contemporaneamente e premi Calcola. Vedi la tua preparazione mentale in percentuale e quanti tavoli giocare oggi. Ogni risposta pesa in base alla sua importanza: se sonno, stato emotivo o forma sono al minimo, il tool ti dice che oggi non è il giorno per giocare. Percentuale e tavoli hanno lo stesso colore: verde, giallo o rosso. Se alcune risposte si contraddicono, per esempio hai dormito male ma ti senti in gran forma, prima del risultato il tool ti invita a rileggerle e a scrivere cosa noti: la tua riflessione finisce nel Diario. Per ogni area con più margine di crescita ricevi un consiglio pratico su come lavorarci prima di iniziare. In cima alla scheda trovi la cosa da correggere che hai scelto alla fine della sessione precedente. La Pre-sessione si fa una volta per sessione. Se hai sbagliato una risposta puoi correggerla, senza cambiare l'orario d'inizio. Senza la Pre-sessione le schede In sessione e Post-sessione restano bloccate.</p>
+        <h2>Prima di giocare: la Pre-sessione</h2>
+        <p>Rispondi a qualche domanda veloce su come ti senti: per esempio sul sonno, sullo stato emotivo e sulle distrazioni. In cambio ricevi il limite di tavoli consigliato per oggi e qualche suggerimento pratico per le aree che ti chiedono più attenzione. In cima alla scheda ritrovi il punto su cui lavorare che hai scelto alla fine della sessione precedente.</p>
       </div>
       <div class="calc-detail-shot">
-        <div class="screenshot-real"><img src="images/screenshot-mental-pre-2.png?v=20261104" alt="Mental Game Check — Pre-sessione" loading="lazy"></div>
+        <div class="screenshot-real"><img src="images/screenshot-mental-pre-3.png?v=20261121" alt="Mental Game Check — Pre-sessione" loading="lazy"></div>
       </div>
     </div>
   </div>
@@ -98,60 +105,52 @@
   <div class="wrap">
     <div class="calc-detail-grid reverse">
       <div class="calc-detail-text">
-        <h2>In sessione: mentre giochi</h2>
-        <ol class="how-it-works">
-          <li><strong>Le tue regole di oggi</strong>: l'orario dopo il quale non ti registri a nuovi tornei, il limite di spesa e la tua frase di riferimento. Restano salvati per le sessioni successive. Il limite di tavoli arriva dalla Pre-sessione e cambia a ogni sessione. Trovi anche cosa fare dopo un'eliminazione che ti brucia: qualche respiro lento e una breve attesa prima di registrarti a un nuovo torneo.</li>
-          <li><strong>Controllo in pausa</strong>: a ogni pausa sincronizzata rispondi a 4 domande: quante decisioni hai preso d'istinto nell'ultima ora, quanto le ultime mani influenzano il tuo stato emotivo, in negativo o in positivo, quanta energia ti resta e quanto ti senti concentrato. Poi indichi quanti tavoli hai aperti: se sono più del limite giornaliero, il tool te lo segnala; con il semaforo verde ti dice quanti ne stai giocando e quanti puoi ancora aprirne, entro il tuo ultimo orario di registrazione e il limite di spesa. Il semaforo ti dice come proseguire: <strong>verde</strong>, continui con il tuo piano; <strong>giallo</strong>, per ora non apri nuovi tornei e giochi quelli in corso con più attenzione, poi alla pausa successiva rifai il controllo; <strong>rosso</strong>, smetti di registrarti e porti a termine solo i tornei che hai già aperto. Per ogni risposta a 1 o 2 ricevi un consiglio pratico da applicare subito, durante la pausa.</li>
-          <li><strong>Cosa senti in questo momento</strong>: se vuoi, scegli una o più emozioni, dalla frustrazione all'euforia, e scrivile con parole tue. Dare un nome a quello che senti ne abbassa l'intensità. Non cambiano il semaforo: per ogni emozione ricevi un consiglio, e restano solo nel tuo browser.</li>
-          <li><strong>Diario delle credenze</strong>: serve a smontare i pensieri che ti tolgono lucidità mentre giochi. Appena ti viene un pensiero come «oggi non gira», lo scrivi con le parole esatte che ti sei detto; poi scrivi cosa dicono i fatti (per esempio: su 4 all-in in coinflip, perderne 3 o 4 capita quasi 1 volta su 3) e infine un pensiero più realistico, come «le carte non le controllo, le decisioni sì». Con «Vedi esempi» trovi sei casi già svolti da usare come spunto. Le credenze salvate restano nel Diario, così col tempo vedi quali pensieri tornano più spesso.</li>
-          <li><strong>Sto per giocare un tavolo finale</strong>: dopo il controllo in pausa, apri i consigli per arrivarci lucido. Una respirazione di pochi minuti per concentrarti; un promemoria tecnico (stack di tutti, payout, valore delle chips in ICM, chi ti copre e chi rischia più di te); e un richiamo al focus: si gioca una mano alla volta.</li>
-        </ol>
+        <h2>Nelle pause: In sessione</h2>
+        <p>A ogni pausa sincronizzata, per esempio dalle 20:55 alle 21:00, rispondi a poche domande sull'ultima ora di gioco e, se vuoi, scegli cosa senti in quel momento. Ricevi un semaforo con un'indicazione per la prossima ora e un consiglio per ogni emozione che scegli. Nella stessa scheda trovi le tue regole di oggi, il diario delle credenze, dove scrivere un pensiero appena lo noti, e una breve routine prima del tavolo finale. Se nella stessa giornata giochi due sessioni, prima di ripartire c'è un controllo dedicato.</p>
       </div>
       <div class="calc-detail-shot">
-        <div class="screenshot-real" style="margin-bottom:16px;"><img src="images/screenshot-mental-in-1.png?v=20261104" alt="Mental Game Check — regole di oggi e controllo in pausa" loading="lazy"></div>
-        <div class="screenshot-real"><img src="images/screenshot-mental-in-2.png?v=20261102" alt="Mental Game Check — diario delle credenze e tavolo finale" loading="lazy"></div>
+        <div class="screenshot-real"><img src="images/screenshot-mental-in-3.png?v=20261121" alt="Mental Game Check — controllo in pausa con semaforo e consiglio" loading="lazy"></div>
       </div>
     </div>
   </div>
 </section>
 
+<section class="calc-detail">
+  <div class="wrap">
+    <div class="calc-detail-grid">
+      <div class="calc-detail-text">
+        <h2>Alla fine: la Post-sessione</h2>
+        <p>Segni se hai rispettato le regole che ti eri dato, dai un voto a come hai giocato e solo dopo indichi il risultato. Ricevi una lettura che mette a confronto le due cose e, per ogni cosa che ti ha tolto lucidità, una domanda su cui riflettere. Compilarla è il modo per chiudere la sessione, invece di portartela dietro.</p>
+      </div>
+      <div class="calc-detail-shot">
+        <div class="screenshot-real"><img src="images/screenshot-mental-post-3.png?v=20261121" alt="Mental Game Check — Post-sessione, lettura di decisioni e risultato" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="calc-detail">
+  <div class="wrap">
+    <div class="calc-detail-grid reverse">
+      <div class="calc-detail-text">
+        <h2>Il tuo Diario</h2>
+        <p>Nel Diario ritrovi tutte le tue sessioni, con le risposte, i controlli in pausa e le tue riflessioni, più i pensieri scritti nel diario delle credenze. Con il tempo compaiono anche le tue tendenze, ognuna con un consiglio su come lavorarci: è guardando più sessioni insieme che si notano le cose che tornano.</p>
+      </div>
+      <div class="calc-detail-shot">
+        <div class="screenshot-real"><img src="images/screenshot-mental-diario-3.png?v=20261121" alt="Mental Game Check — Diario" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 21/11 (approvato): sezione 5, i pulsanti aprono installa.html sulla linguetta del dispositivo -->
 <section class="calc-detail">
   <div class="wrap">
     <div class="calc-detail-grid solo-testo">
       <div class="calc-detail-text">
-        <h2>Sessioni lunghe e doppie sessioni</h2>
-        <p>Il Mental Game Check segue la sessione anche quando è lunga o doppia. Se passano più di 2 ore senza un controllo in pausa, ti chiede cosa ti ha portato a saltarli: un controllo dimenticato, nessuna pausa, hai smesso di giocare oppure hai staccato e stai per iniziare la seconda sessione.</p>
-        <p>Prima della seconda sessione fai un controllo: 4 domande su lucidità, energia, frustrazione per la prima sessione e voglia di recuperare. Il semaforo ti dice se iniziarla e con quanti tavoli, se la seconda sessione è sconsigliata oppure se è meglio fermarsi per oggi. Nella seconda sessione il limite di tavoli può solo scendere, mai superare quello della Pre-sessione. La doppia sessione ha una sola Pre-sessione e una sola Post-sessione; una terza sessione non è mai consigliabile.</p>
-        <p>Se riapri il tool dopo più di 8 ore dall'ultimo controllo, per esempio la mattina dopo, la sessione è chiusa: il tool ti chiede di completarla con la Post-sessione oppure di iniziarne una nuova.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="calc-detail">
-  <div class="wrap">
-    <div class="calc-detail-grid">
-      <div class="calc-detail-text">
-        <h2>Post-sessione: a fine sessione</h2>
-        <p>Indica se hai rispettato le regole e giudica la qualità del tuo gioco separata dal risultato. Segna cosa ti ha tolto lucidità e scegli una sola cosa da correggere, che ritroverai in cima alla prossima Pre-sessione. Mentre compili, il tool ti indica su cosa lavorare: per esempio, se non hai rispettato una delle tue regole ti chiede di annotare cosa ti ha portato a non rispettarla; se valuti le tue decisioni sotto il tuo livello, ti chiede di individuare il momento in cui hai perso lucidità. Con una doppia sessione la Post-sessione è una sola, alla fine della seconda. Se due risposte si contraddicono, per esempio ti dai il massimo sul gioco ma segni un errore tuo, prima di salvare il tool ti invita a rileggerle. Con Salva nel diario chiudi la sessione.</p>
-      </div>
-      <div class="calc-detail-shot">
-        <div class="screenshot-real" style="margin-bottom:16px;"><img src="images/screenshot-mental-post-coerenza.png?v=20261104" alt="Mental Game Check — Post-sessione, invito a rileggere le risposte" loading="lazy"></div>
-        <div class="screenshot-real"><img src="images/screenshot-mental-post-1.png?v=20261103" alt="Mental Game Check — Post-sessione" loading="lazy"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="calc-detail">
-  <div class="wrap">
-    <div class="calc-detail-grid reverse">
-      <div class="calc-detail-text">
-        <h2>Diario: le tue tendenze</h2>
-        <p>Qui ritrovi tutte le tue sessioni, con l'orario d'inizio e di fine, e le tue credenze. Le doppie sessioni compaiono come una sola voce, con il controllo prima della seconda sessione e i cambi del limite di tavoli durante la giornata; per ogni controllo in pausa ritrovi le risposte, i tavoli aperti e le emozioni, e i controlli saltati restano segnati. Trovi anche le riflessioni che hai scritto quando il tool ti ha invitato a rileggere le risposte. Dopo almeno 5 sessioni compaiono le tendenze: il trigger che ti toglie lucidità più spesso, la tua preparazione media, in quante sessioni hai rispettato tutte le regole, come cambia il tuo volume dopo una sessione negativa e se ti è capitato di vincere giocando sotto il tuo livello. Il Diario confronta anche il voto che dai al tuo gioco nelle sessioni positive e in quelle negative, e ti dice se il risultato condiziona il giudizio sulle tue decisioni. Le tendenze da migliorare sono segnate in giallo, con un consiglio su come lavorarci, quelle che vanno bene in verde. Ogni sessione ha il colore del suo risultato, così vedi l'andamento a colpo d'occhio.</p>
-      </div>
-      <div class="calc-detail-shot">
-        <div class="screenshot-real"><img src="images/screenshot-mental-diario.png?v=20261104" alt="Mental Game Check — Diario" loading="lazy"></div>
+        <h2>Installa l'app</h2>
+        <p>Il Mental Game Check si installa sul telefono e sul computer come le altre app, così lo ritrovi a portata di mano prima di ogni sessione. Non serve passare da nessuno store: scegli il tuo dispositivo e segui i passi.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:20px;"><a class="btn btn-ghost" style="display:inline-flex;align-items:center;gap:8px;" href="https://mentalgamecheck.com/installa.html#iphone" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M11 18.5h2"/></svg>Su iPhone</a><a class="btn btn-ghost" style="display:inline-flex;align-items:center;gap:8px;" href="https://mentalgamecheck.com/installa.html#android" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M11 18.5h2"/></svg>Su Android</a><a class="btn btn-ghost" style="display:inline-flex;align-items:center;gap:8px;" href="https://mentalgamecheck.com/installa.html#computer" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.8"/><path d="M8 20h8M12 16v4"/></svg>Sul computer</a></div>
       </div>
     </div>
   </div>
@@ -162,9 +161,27 @@
     <div class="calc-detail-grid solo-testo">
       <div class="calc-detail-text">
         <h2>I tuoi dati</h2>
-        <p>Le risposte restano nel tuo browser. Per calcolare punteggi e tendenze, al server arrivano solo i numeri necessari, senza le tue note, le credenze, le riflessioni e le emozioni che scegli, e non vengono salvati. Puoi scaricare una copia del diario o esportarlo in Excel per il tuo mental coach.</p>
-        <p style="margin-top:22px;font-style:italic;">Creato da Danilo Rucchetta, giocatore professionista di MTT e mental coach sportivo certificato.</p>
+        <p>Le tue risposte e il tuo Diario restano solo nel tuo browser, sul tuo dispositivo: noi non li conserviamo. Per i calcoli, al nostro server arrivano solo numeri e scelte da un elenco, che non vengono salvati; le tue parole non lasciano mai il browser. Tutti i dettagli sono nella <a href="mental-game-check-privacy.html">Privacy</a>.</p>
       </div>
+    </div>
+  </div>
+</section>
+<section class="calc-detail">
+  <div class="wrap">
+    <div class="calc-detail-grid solo-testo">
+      <div class="calc-detail-text">
+        <h2>Chi l'ha creato</h2>
+        <p>Il Mental Game Check nasce dall'esperienza di Danilo Rucchetta, giocatore professionista di MTT. In vent'anni ai tavoli Danilo ha vissuto in prima persona le emozioni e i pensieri che accompagnano ogni decisione di gioco. Sono state proprio le sue difficoltà a spingerlo a studiare a fondo le dinamiche mentali del poker, fino a scegliere il percorso di mental coach: prima per lavorare su se stesso, poi per dare supporto a chi le vive a sua volta.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="calc-detail">
+  <div class="wrap">
+    <div style="text-align:center;max-width:640px;margin:0 auto;">
+      <h2>Inizia dalla prossima sessione</h2>
+      <p>Il primo passo è una Pre-sessione di pochi minuti, prima di aprire i tavoli. Hai 15 giorni gratuiti per provarlo.</p>
+      <a class="btn btn-primary" style="margin-top:18px;" href="https://mentalgamecheck.com/accesso.html?registrati" target="_blank" rel="noopener">Prova gratis</a>
     </div>
   </div>
 </section>
@@ -172,10 +189,11 @@
   <div class="wrap">
     <div class="footer-inner">
       <div class="brand">Mindset &amp; Discipline Lab</div>
-      <div class="fine">© <span id="year"></span> · Poker Range e gli strumenti di Mindset &amp; Discipline Lab</div>
+      <div class="fine">© <span id="year"></span> · Mental Game Check™, un progetto Mindset &amp; Discipline Lab</div>
     </div>
-    <div class="fine" style="margin-top:18px;"><a href="privacy.html">Privacy</a> · <a href="termini.html">Termini di servizio</a> · <a href="assistenza.html">Assistenza</a></div>
-    <div class="fine" style="margin-top:8px;">Il servizio è riservato ai maggiorenni. Il gioco con vincite in denaro può causare dipendenza patologica. Telefono Verde Nazionale per le problematiche legate al gioco d'azzardo: <strong style="color:var(--paper);font-weight:600;white-space:nowrap;">800 55 88 22</strong>.</div>
+    <!-- 21/11: pagina del Mental → pagine legali del Mental -->
+    <div class="fine" style="margin-top:18px;"><a href="mental-game-check-privacy.html">Privacy</a> · <a href="mental-game-check-termini.html">Termini di servizio</a> · <a href="mental-game-check-assistenza.html">Assistenza</a></div>
+    <div class="fine" style="margin-top:8px;">Il servizio è riservato ai maggiorenni. Il gioco con vincite in denaro può causare dipendenza patologica.<br>Telefono Verde Nazionale per le problematiche legate al gioco d'azzardo: <strong style="color:var(--paper);font-weight:600;white-space:nowrap;">800 55 88 22</strong>.</div>
   </div>
 </footer>
 
@@ -204,6 +222,6 @@
 </script>
 <script src="glossario.js?v=1" defer></script>
 <script>try{navigator.sendBeacon('https://poker-range-api-production.up.railway.app/api/visita/'+(location.pathname.split('/').pop().replace('.html','')||'index'))}catch(e){}</script>
-<script src="menu-mobile.js?v=1" defer></script>
+<script src="menu-mobile.js?v=2" defer></script>
 </body>
 </html>

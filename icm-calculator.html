@@ -15,13 +15,14 @@
 <meta name="twitter:card" content="summary">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="style.css?v=20261028">
+<link rel="stylesheet" href="style.css?v=20261121">
 </head>
 <body>
 <header class="nav">
   <div class="nav-inner">
     <a href="index.html" class="brand" style="text-decoration:none;">Mindset<span class="amp">&nbsp;&amp;&nbsp;</span>Discipline Lab</a>
     <nav class="nav-links">
+      <a href="mental-game-check.html">Mental Game Check</a>
       <a href="poker-range-preflop.html">Poker Range Preflop</a>
       <div class="nav-drop">
         <button type="button" class="nav-drop-btn active" aria-haspopup="true">Poker Tools <span class="nav-drop-freccia" aria-hidden="true">▾</span></button>
@@ -31,12 +32,18 @@
           <a href="icm-calculator.html" class="active">ICM Calculator</a>
         </div>
       </div>
-      <a href="mental-game-check.html">Mental Game Check</a>
       <a href="glossario.html">Glossario</a>
     </nav>
+    <!-- 21/11/2026: due app, ognuna con il suo account → Accedi e Registrati a tendina (sempre prima Mental Game Check) -->
     <div class="nav-ctas">
-      <a class="nav-cta" href="https://pokerrange.online/" target="_blank" rel="noopener">Accedi</a>
-      <a class="nav-cta nav-cta-primary" href="https://pokerrange.online/?registrati" target="_blank" rel="noopener">Registrati</a>
+      <div class="nav-drop nav-drop-cta">
+        <button type="button" class="nav-cta nav-drop-btn" aria-haspopup="true">Accedi <span class="nav-drop-freccia" aria-hidden="true">▾</span></button>
+        <div class="nav-drop-menu"><a href="https://mentalgamecheck.com/" target="_blank" rel="noopener">Mental Game Check</a><a href="https://pokerrange.online/" target="_blank" rel="noopener">Poker Range</a></div>
+      </div>
+      <div class="nav-drop nav-drop-cta">
+        <button type="button" class="nav-cta nav-cta-primary nav-drop-btn" aria-haspopup="true">Registrati <span class="nav-drop-freccia" aria-hidden="true">▾</span></button>
+        <div class="nav-drop-menu"><a href="https://mentalgamecheck.com/accesso.html?registrati" target="_blank" rel="noopener">Mental Game Check</a><a href="https://pokerrange.online/?registrati" target="_blank" rel="noopener">Poker Range</a></div>
+      </div>
     </div>
   </div>
 </header>
@@ -90,7 +97,7 @@
       <div class="fine">© <span id="year"></span> · Poker Range e gli strumenti di Mindset &amp; Discipline Lab</div>
     </div>
     <div class="fine" style="margin-top:18px;"><a href="privacy.html">Privacy</a> · <a href="termini.html">Termini di servizio</a> · <a href="assistenza.html">Assistenza</a></div>
-    <div class="fine" style="margin-top:8px;">Il servizio è riservato ai maggiorenni. Il gioco con vincite in denaro può causare dipendenza patologica. Telefono Verde Nazionale per le problematiche legate al gioco d'azzardo: <strong style="color:var(--paper);font-weight:600;white-space:nowrap;">800 55 88 22</strong>.</div>
+    <div class="fine" style="margin-top:8px;">Il servizio è riservato ai maggiorenni. Il gioco con vincite in denaro può causare dipendenza patologica.<br>Telefono Verde Nazionale per le problematiche legate al gioco d'azzardo: <strong style="color:var(--paper);font-weight:600;white-space:nowrap;">800 55 88 22</strong>.</div>
   </div>
 </footer>
 
@@ -119,6 +126,6 @@
 </script>
 <script src="glossario.js?v=1" defer></script>
 <script>try{navigator.sendBeacon('https://poker-range-api-production.up.railway.app/api/visita/'+(location.pathname.split('/').pop().replace('.html','')||'index'))}catch(e){}</script>
-<script src="menu-mobile.js?v=1" defer></script>
+<script src="menu-mobile.js?v=2" defer></script>
 </body>
 </html>

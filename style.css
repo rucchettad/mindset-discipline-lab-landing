@@ -446,3 +446,13 @@
   .nav-drop-menu a:hover{ background:rgba(31,111,235,0.12); }
   .nav-drop:hover .nav-drop-menu, .nav-drop:focus-within .nav-drop-menu{ visibility:visible; opacity:1; }
   .nav-drop:hover .nav-drop-freccia, .nav-drop:focus-within .nav-drop-freccia{ transform:rotate(180deg); }
+
+/* Accedi e Registrati a tendina: due app, ognuna con il suo account (21/11/2026) */
+.nav-drop-cta .nav-drop-btn.nav-cta{ padding:9px 18px; border:1px solid var(--wire); border-radius:6px; font-family:'DM Sans', monospace; font-size:13px; font-weight:500; color:var(--paper); }
+.nav-drop-cta .nav-drop-btn.nav-cta-primary{ background:var(--copper); border-color:var(--copper); color:#ffffff; font-weight:600; }
+.nav-drop-cta .nav-drop-btn.nav-cta-primary:hover{ background:var(--copper-hover); border-color:var(--copper-hover); }
+.nav-drop-cta .nav-drop-menu{ left:auto; right:0; font-family:'DM Sans', sans-serif; font-size:14px; }
+.nav-drop-cta .nav-drop-menu a{ color:var(--paper); text-decoration:none; }
+.nav-drop-cta.aperto .nav-drop-menu{ visibility:visible; opacity:1; }
+@media (min-width:1200px){ .nav-drop-cta .nav-drop-btn.nav-cta{ font-size:14px; } }
+@media (max-width:480px){ .nav-drop-cta .nav-drop-btn.nav-cta{ padding:8px 11px; font-size:12px; } }
