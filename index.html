@@ -75,6 +75,8 @@
     .preflop-statement{ overflow:hidden; }
     .preflop-statement > .wrap, .statement-ill{ z-index:1; }
     .preflop-statement > .wrap{ position:relative; }
+    .preflop-statement{ min-height:620px; display:flex; flex-direction:column; justify-content:center; }
+    .preflop-statement > .wrap{ width:100%; box-sizing:border-box; }
   }
   @media (max-width:1060px){ .statement-ill{ display:none; } }
   /* Hub degli strumenti accanto al titolo "Range preflop e calcolatori…" (solo da PC) */
@@ -109,6 +111,21 @@
       width:min(560px, calc(100% - 110px)); margin:48px auto 0; padding-left:30px; box-sizing:content-box;
     }
   }
+  .chi-grid{ display:grid; grid-template-columns:300px 1fr; gap:48px; align-items:start; max-width:900px; margin:0 auto; }
+  .chi-foto{ width:100%; height:auto; border-radius:18px; border:1px solid rgba(88,166,255,.25); box-shadow:0 18px 50px rgba(0,0,0,.45); }
+  .chi-testo h2{ margin:10px 0 14px; }
+  .chi-testo p{ line-height:1.7; opacity:.9; margin:0 0 14px; }
+  .chi-testo p:last-child{ margin-bottom:0; }
+  @media (max-width:760px){ .chi-grid{ grid-template-columns:1fr; gap:24px; } .chi-foto{ max-width:260px; margin:0 auto; } }
+  .hero-offerta span{ white-space:nowrap; }
+  .hero-offerta{ margin:14px 0 0; font-size:14px; color:#8ec5ff; opacity:.9; letter-spacing:.2px; }
+  /* 22/11: telefono — meno spazio sopra il titolo, 4 voci su 2 colonne */
+  @media (max-width:600px){
+    .hero{ padding-top:44px; }
+    .hero-meta{ display:grid; grid-template-columns:1fr 1fr; column-gap:18px; row-gap:18px; margin-top:30px; }
+    .hero-meta strong{ font-size:19px; }
+  }
+  .nessuna-carta-fine{ margin:14px 0 0; font-size:13px; line-height:1.5; color:#8ec5ff; opacity:.9; }
 </style>
 </head>
 <body>
@@ -143,25 +160,26 @@
 </header>
 
 <section class="hero">
-  <!-- Sfondo: grafico con la frase "La varianza decide la sessione. La disciplina decide il lungo periodo." (21/11) (solo da PC) -->
+  <!-- Sfondo: grafico con la frase "La varianza condiziona la sessione. La disciplina costruisce il lungo periodo." (22/11) (solo da PC) -->
   <svg class="hero-grafico" viewBox="70 0 750 420" preserveAspectRatio="xMinYMax meet" aria-hidden="true" focusable="false">
     <line x1="70" y1="340" x2="820" y2="340" class="g"/><line x1="64" y1="340" x2="70" y2="340" class="t"/><text x="58" y="344" text-anchor="end" class="n">0</text><line x1="70" y1="340" x2="70" y2="346" class="t"/><line x1="70" y1="266" x2="820" y2="266" class="g"/><line x1="64" y1="266" x2="70" y2="266" class="t"/><text x="58" y="270" text-anchor="end" class="n">+25</text><line x1="258" y1="340" x2="258" y2="346" class="t"/><text x="258" y="362" text-anchor="middle" class="n">25k</text><line x1="70" y1="192" x2="820" y2="192" class="g"/><line x1="64" y1="192" x2="70" y2="192" class="t"/><text x="58" y="196" text-anchor="end" class="n">+50</text><line x1="445" y1="340" x2="445" y2="346" class="t"/><text x="445" y="362" text-anchor="middle" class="n">50k</text><line x1="70" y1="118" x2="820" y2="118" class="g"/><line x1="64" y1="118" x2="70" y2="118" class="t"/><text x="58" y="122" text-anchor="end" class="n">+75</text><line x1="632" y1="340" x2="632" y2="346" class="t"/><text x="632" y="362" text-anchor="middle" class="n">75k</text><line x1="70" y1="44" x2="820" y2="44" class="g"/><line x1="64" y1="44" x2="70" y2="44" class="t"/><text x="58" y="48" text-anchor="end" class="n">+100</text><line x1="820" y1="340" x2="820" y2="346" class="t"/><text x="820" y="362" text-anchor="middle" class="n">100k</text><line x1="70" y1="340" x2="826" y2="340" class="a"/><line x1="70" y1="340" x2="70" y2="29" class="a"/>
     <path id="hero-curva" d="M80.0,310.0 L207.5,285.2 Q235.4,279.8 264.1,284.9 L428.9,314.0 Q474.3,322.0 514.0,289.8 L805.4,54.0" fill="none"/>
-    <text class="frase" font-size="29.9" dy="-7" textLength="812" lengthAdjust="spacing"><textPath href="#hero-curva"><tspan class="v">La varianza decide la sessione.&#160;</tspan><tspan class="d">La </tspan><tspan class="dd">disciplina</tspan><tspan class="d"> decide il lungo periodo.</tspan></textPath></text>
+    <text class="frase" font-size="25.6" dy="-7" textLength="812" lengthAdjust="spacing"><textPath href="#hero-curva"><tspan class="v">La varianza condiziona la sessione.&#160;</tspan><tspan class="d">La </tspan><tspan class="dd">disciplina</tspan><tspan class="d"> costruisce il lungo periodo.</tspan></textPath></text>
   </svg>
   <div class="wrap">
     <div class="hero-single">
-      <h1>Le carte non dipendono da te.<br><em>In quale stato ti siedi al tavolo</em>, sì.</h1>
-      <p class="hero-sub" style="margin-top:18px;max-width:720px;font-size:18px;line-height:1.6;opacity:0.85;">Il Mental Game Check è l'app per il mental game nel poker: un supporto alla consapevolezza di sé e alla riflessione, che ti accompagna prima di giocare, nelle pause e alla fine della sessione.</p>
+      <h1>Le carte le decide il mazzo.<br><em>Lo stato mentale con cui le giochi</em> lo decidi tu.</h1>
+      <p class="hero-sub" style="margin-top:18px;max-width:720px;font-size:18px;line-height:1.6;opacity:0.85;">Il Mental Game Check è l'app per il mental game nel poker: un supporto alla consapevolezza di sé e alla riflessione, che ti accompagna in ogni fase della sessione.</p>
       <div class="hero-ctas" style="margin-top:34px;">
         <a class="btn btn-primary" href="https://mentalgamecheck.com/accesso.html?registrati" target="_blank" rel="noopener">Prova gratis</a>
         <a class="btn btn-ghost" href="mental-game-check.html">Scopri come funziona</a>
       </div>
+      <p class="hero-offerta"><span>15 giorni di prova gratuita</span> · <span>pochi minuti a sessione</span></p>
       <div class="hero-meta">
-        <div><strong>Pre-sessione</strong>come arrivi oggi</div>
-        <div><strong>In sessione</strong>un controllo a ogni pausa</div>
-        <div><strong>Post-sessione</strong>decisioni e risultato, separati</div>
-        <div><strong>Diario</strong>ciò che torna, sessione dopo sessione</div>
+        <div><strong>Pre-sessione</strong>prima di iniziare a giocare</div>
+        <div><strong>In sessione</strong>un check in pausa</div>
+        <div><strong>Post-sessione</strong>per chiudere e ripartire</div>
+        <div><strong>Diario</strong>per riconoscere ciò che si ripete</div>
       </div>
     </div>
   </div>
@@ -173,16 +191,16 @@
     <div style="max-width:760px;">
       <span class="eyebrow">IL MENTAL GAME</span>
       <h2>Il tilt non fa sempre rumore</h2>
-      <p style="font-size:19px;color:var(--copper-bright);margin-top:-6px;">Spesso il più costoso è quello che non si nota.</p>
-      <p>Quando si parla di tilt si pensa a tastiere sbattute e scatti d'ira. Ma la rabbia è solo la parte che si vede. Prima c'è un colpo al tavolo, il modo in cui lo leggiamo e lo stato in cui ci arriviamo: la stanchezza, una giornata che non gira, una frustrazione che cresce colpo dopo colpo.</p>
-      <p>Spesso a dare peso a quel colpo è l'ego, ed è naturale: in un gioco di competizione pura, dove ci si misura di continuo con gli altri, una mano diventa una sfida personale e un risultato diventa un giudizio su di sé.</p>
+      <p style="font-size:19px;color:var(--copper-bright);margin-top:-6px;">Spesso nasce da qualcosa che senti, ma non riconosci.</p>
+      <p>Quando si parla di tilt si pensa a tastiere sbattute e scatti d'ira. Ma la rabbia è solo la parte che si vede. Prima della rabbia c'è una mano andata male, il modo in cui la leggiamo e lo stato in cui ci trova: la stanchezza, una giornata storta, una frustrazione che cresce in silenzio.</p>
+      <p>Di solito a darle peso è l'ego, ed è naturale: in un gioco di competizione pura, dove ci si misura di continuo con gli altri, una mano diventa una sfida personale e un risultato un giudizio su di sé.</p>
       <p>Molti la rabbia non la mostrano mai, e a volte l'emozione in gioco è un'altra, anche positiva. Le decisioni però cambiano lo stesso: una value bet lasciata lì, un raise che diventa un call, una 3-bet in più verso chi ci ha appena battuto. Nessuna di queste scelte sembra un errore: è il tilt invisibile, che si traveste da scelta tecnica, da occasione, da coraggio.</p>
-      <p>Quello che non esce non sparisce: passa alla sessione dopo, diventa sfiducia e a volte spinge a sabotare proprio ciò che si sta costruendo. Con il tempo, consuma anche la voglia di giocare.</p>
+      <p>Quello che non esce non sparisce: passa alla sessione successiva, si trasforma in sfiducia e a volte spinge a sabotare proprio ciò che si sta costruendo. Con il tempo, consuma anche la voglia di giocare.</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:28px;">
         <div style="background:rgba(12,18,32,.75);border:1px solid var(--wire);border-radius:12px;padding:18px 18px 16px;">
           <h3 style="margin:0 0 8px;font-size:18px;">La voglia di rifarsi</h3>
-          <p style="margin:0;opacity:.85;line-height:1.55;font-size:15px;">Chiudere in rosso sembra una sconfitta personale: un tavolo in più o un buy-in più alto si presentano come una buona occasione per recuperare.</p>
+          <p style="margin:0;opacity:.85;line-height:1.55;font-size:15px;">Chiudere in rosso sembra una sconfitta personale: un tavolo in più o un buy-in più alto si presenta come una buona occasione per recuperare.</p>
         </div>
         <div style="background:rgba(12,18,32,.75);border:1px solid var(--wire);border-radius:12px;padding:18px 18px 16px;">
           <h3 style="margin:0 0 8px;font-size:18px;">L'euforia</h3>
@@ -205,8 +223,13 @@
           <p style="margin:0;opacity:.85;line-height:1.55;font-size:15px;">Una bad beat o un bluff andato male restano in testa come un conto aperto, e l'attenzione torna su quella mano invece che su quella in gioco.</p>
         </div>
     </div>
-    <p style="max-width:760px;margin-top:28px;font-size:17px;line-height:1.6;">Non dipende dall'esperienza né dal carattere: riguarda anche chi gioca da anni e al tavolo resta sempre calmo. La lettura più difficile è quella di sé stessi.</p>
-    <p style="max-width:760px;margin-top:14px;font-size:17px;line-height:1.6;">Il Mental Game Check lavora proprio qui. Prima di giocare ti aiuta a riconoscere come arrivi al tavolo, nelle pause a notare cosa sta cambiando, alla fine a chiudere la sessione invece di portartela dietro. E nel Diario, sessione dopo sessione, vedi cosa torna. <strong>Quando riconosci cosa sta succedendo, la scelta torna a essere tua.</strong></p>
+    <p style="max-width:760px;margin-top:28px;font-size:17px;line-height:1.6;">L'esperienza e il carattere aiutano, ma non bastano: il tilt colpisce anche chi gioca da anni e sembra calmo in ogni situazione. La lettura più difficile è quella di sé stessi.</p>
+    <p style="max-width:760px;margin-top:14px;font-size:17px;line-height:1.6;">Il Mental Game Check lavora proprio qui. Prima di giocare ti aiuta a riconoscere come stai, nelle pause a notare cosa sta cambiando, alla fine a riflettere e a chiudere la sessione invece di portartela dietro. E nel Diario, sessione dopo sessione, vedi cosa si ripete. <strong>Quando riconosci cosa sta succedendo, la scelta torna a essere tua.</strong></p>
+    <!-- 22/11: pulsanti dopo la sezione sul tilt -->
+    <div class="hero-ctas" style="margin-top:28px;">
+      <a class="btn btn-primary" href="https://mentalgamecheck.com/accesso.html?registrati" target="_blank" rel="noopener">Prova gratis</a>
+      <a class="btn btn-ghost" href="mental-game-check.html">Scopri come funziona</a>
+    </div>
   </div>
 </section>
 
@@ -217,10 +240,9 @@
   <div class="wrap">
     <div class="statement-inner">
       <p class="statement-lead">Il mental game si allena, come il resto del gioco.</p>
-      <p>Non serve diventare un'altra persona: servono piccoli gesti, ripetuti ogni volta che ti siedi al tavolo.</p>
-      <p>All'inizio chiedono attenzione e un po' di fatica. Poi, a forza di ripeterli, diventano naturali, e i primi risultati sono questi: decisioni più lucide, meno sessioni che ti porti dietro, più fiducia nel tuo gioco.</p>
-      <p>Anche i numeri, con il tempo, seguono. E alla fine arriva la cosa più preziosa: la testa libera. È lo stato di flow: sei dentro la mano in corso, le decisioni scorrono e il rumore si spegne. È lì che giochi il tuo poker migliore.</p>
-      <p>Mindset &amp; Discipline Lab nasce da vent'anni ai tavoli e dal percorso di mental coach di Danilo Rucchetta: strumenti per la parte mentale e per quella tecnica del poker.</p>
+      <p>Non serve diventare un'altra persona. Servono piccoli gesti, fatti ogni volta che giochi: fermarti un momento prima di iniziare, ascoltarti nelle pause, fare il punto alla fine.</p>
+      <p>All'inizio chiedono attenzione e un po' di fatica. Poi diventano abitudine, e si vede: decisioni più lucide, meno sessioni che pesano il giorno dopo, più fiducia nel tuo gioco.</p>
+      <p>E sempre più spesso arriva la cosa più preziosa: la testa libera. Sei dentro la mano in corso, le decisioni scorrono e il rumore si spegne. È lo stato di flow, ed è lì che giochi il tuo poker migliore.</p>
     </div>
   </div>
 </section>
@@ -239,13 +261,13 @@
 <text x="370" y="232" text-anchor="middle" font-family="DM Sans" font-size="12" fill="#8ec5ff" fill-opacity="0.85">la parte tecnica</text></svg></div>
       <span class="eyebrow">I PROGETTI</span>
       <h2>Due app, ognuna con il suo compito</h2>
-      <p>Il Mental Game Check lavora sulla parte mentale, Poker Range su quella tecnica, con range e calcolatori per lo studio. Ogni app ha il suo account e il suo abbonamento.</p>
+      <p>Il Mental Game Check si occupa della parte mentale, Poker Range di quella tecnica, con range e calcolatori per lo studio.</p>
     </div>
     <div class="lab-grid" style="grid-template-columns:repeat(2,1fr); gap:18px;">
       <div class="lab-card active" style="border-color:var(--copper);">
         <span class="status live">Disponibile ora</span>
         <h3>Mental Game Check</h3>
-        <p style="margin:8px 0 14px;opacity:.85;line-height:1.55;">L'app per il mental game: Pre-sessione, controllo nelle pause, Post-sessione e Diario.</p>
+        <p style="margin:8px 0 14px;opacity:.85;line-height:1.55;">L'app per il mental game: Pre-sessione, check in pausa, Post-sessione e Diario, per accorgerti del tuo stato prima che entri nelle decisioni.</p>
         <a class="go" href="mental-game-check.html" aria-label="Scopri il Mental Game Check">Scopri →</a>
       </div>
       <div class="lab-card active">
@@ -257,12 +279,30 @@
     </div>
   </div>
 </section>
+<!-- 22/11: Chi c'è dietro -->
+<section class="chi-dietro">
+  <div class="wrap">
+    <div class="chi-grid">
+      <img class="chi-foto" src="images/danilo-rucchetta.webp" width="600" height="692" alt="Danilo Rucchetta al tavolo da poker" loading="lazy">
+      <div class="chi-testo">
+        <span class="eyebrow">CHI C'È DIETRO</span>
+        <h2>Danilo Rucchetta</h2>
+        <p>Gioco a poker da oltre vent'anni: ho iniziato dai Sit &amp; Go, sono passato al cash game e dal 2013 studio e gioco i tornei MTT.</p>
+        <p>Per anni ho guardato il gioco solo dal lato dei numeri: statistiche, analisi, profitto. La parte mentale non la vedevo, eppure viene prima di tutto questo.</p>
+        <p>Il primo passo è stato accorgermene. Il secondo, decidere di lavorarci. Non è stato immediato: ci sono volute disciplina e costanza, e con il tempo ho imparato a conoscermi meglio, a rispettarmi e a vivere il gioco con più maturità ed equilibrio.</p>
+        <p>Così il risultato economico è passato da obiettivo a conseguenza, legata all'unione tra performance mentale, solidità tecnica e stato di flow.</p>
+        <p>Da qui la scelta di formarmi e diventare mental coach: prima per la mia crescita personale, poi per accompagnare altri giocatori nella loro. Il Mental Game Check e Poker Range nascono proprio dall'incontro di questi due lati del gioco: mentale e tecnico.</p>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="calc-detail">
   <div class="wrap">
     <div style="text-align:center;max-width:640px;margin:0 auto;">
       <h2>Inizia dalla prossima sessione</h2>
-      <p>Il primo passo è una Pre-sessione di pochi minuti, prima di aprire i tavoli. Hai 15 giorni gratuiti per provare il Mental Game Check.</p>
+      <p>Bastano pochi minuti di Pre-sessione, prima di aprire i tavoli.<br>Hai 15 giorni gratuiti per provare il Mental Game Check.</p>
       <a class="btn btn-primary" style="margin-top:18px;" href="https://mentalgamecheck.com/accesso.html?registrati" target="_blank" rel="noopener">Prova gratis</a>
+      <p class="nessuna-carta-fine">Nessun metodo di pagamento richiesto alla registrazione. Alla fine della prova scegli tu se abbonarti.</p>
     </div>
   </div>
 </section>

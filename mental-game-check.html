@@ -21,6 +21,16 @@
   .calc-detail-grid.solo-testo{ grid-template-columns:1fr; }
   .calc-detail-grid.solo-testo .calc-detail-text{ max-width:760px; }
   .calc-detail-grid.solo-testo .calc-detail-text p{ max-width:none; }
+  .chi-grid{ display:grid; grid-template-columns:300px 1fr; gap:48px; align-items:start; max-width:900px; margin:0 auto; }
+  .chi-grid.chi-breve{ grid-template-columns:200px 1fr; align-items:center; }
+  .chi-foto{ width:100%; height:auto; border-radius:18px; border:1px solid rgba(88,166,255,.25); box-shadow:0 18px 50px rgba(0,0,0,.45); }
+  .chi-testo h2{ margin:10px 0 14px; }
+  .chi-testo p{ line-height:1.7; opacity:.9; margin:0 0 14px; }
+  .chi-testo p:last-child{ margin-bottom:0; }
+  @media (max-width:760px){ .chi-grid, .chi-grid.chi-breve{ grid-template-columns:1fr; gap:24px; } .chi-foto{ max-width:220px; margin:0 auto; } }
+  .page-header-price .lancio{ display:inline-block; font-size:12px; font-weight:700; letter-spacing:.6px; text-transform:uppercase; color:#8ec5ff; border:1px solid rgba(88,166,255,.45); background:rgba(31,111,235,.12); border-radius:999px; padding:4px 10px; margin-bottom:10px; }
+  .page-header-price .nessuna-carta{ margin:12px 0 0; font-size:13px; line-height:1.5; color:#8ec5ff; opacity:.9; }
+  .nessuna-carta-fine{ margin:14px 0 0; font-size:13px; line-height:1.5; color:#8ec5ff; opacity:.9; }
 </style>
 </head>
 <body>
@@ -65,11 +75,13 @@
       </div>
       <div class="page-header-price">
       <div>
+        <div class="lancio">Prezzo di lancio</div>
         <div class="amount">12,99 € <span>/ mese</span></div>
         <div class="sub">15 giorni di prova gratuita</div>
         <div class="sub" style="margin-top:6px;">App per telefono e computer</div>
       </div>
       <a class="btn btn-primary" href="https://mentalgamecheck.com/accesso.html?registrati" target="_blank" rel="noopener">Prova gratis</a>
+      <p class="nessuna-carta">Nessun metodo di pagamento richiesto alla registrazione. Alla fine della prova scegli tu se abbonarti.</p>
     </div>
     </div>
   </div>
@@ -80,7 +92,7 @@
     <div class="calc-detail-grid solo-testo">
       <div class="calc-detail-text">
         <h2>Perché serve</h2>
-        <p>Nei tornei la varianza non dipende da te. Come arrivi al tavolo e come rispondi a quello che succede, invece, si può allenare. La stanchezza, una bad beat che pesa ancora, la voglia di recuperare: possono entrare nelle decisioni senza fare rumore. Il Mental Game Check ti aiuta a riconoscerle in tempo, sessione dopo sessione. È uno strumento di autovalutazione per il gioco: non è una valutazione psicologica né una terapia.</p>
+        <p>Nei tornei le carte che escono non dipendono da te. Lo stato in cui giochi e come rispondi a quello che succede, invece, si possono allenare. La stanchezza, una bad beat che pesa ancora, la voglia di recuperare: possono entrare nelle decisioni senza fare rumore. Il Mental Game Check ti aiuta a riconoscerle in tempo, sessione dopo sessione. È uno strumento di autovalutazione per la parte mentale del gioco: non è una valutazione psicologica né una terapia. Si può usare prima di giocare, nelle pause e alla fine della sessione.</p>
       </div>
     </div>
   </div>
@@ -165,12 +177,15 @@
     </div>
   </div>
 </section>
-<section class="calc-detail">
+<!-- 22/11: Chi c'è dietro (versione breve, allineata alla home) -->
+<section class="chi-dietro">
   <div class="wrap">
-    <div class="calc-detail-grid solo-testo">
-      <div class="calc-detail-text">
-        <h2>Chi l'ha creato</h2>
-        <p>Il Mental Game Check nasce dall'esperienza di Danilo Rucchetta, giocatore professionista di MTT. In vent'anni ai tavoli Danilo ha vissuto in prima persona le emozioni e i pensieri che accompagnano ogni decisione di gioco. Sono state proprio le sue difficoltà a spingerlo a studiare a fondo le dinamiche mentali del poker, fino a scegliere il percorso di mental coach: prima per lavorare su se stesso, poi per dare supporto a chi le vive a sua volta.</p>
+    <div class="chi-grid chi-breve">
+      <img class="chi-foto" src="images/danilo-rucchetta.webp" width="600" height="692" alt="Danilo Rucchetta al tavolo da poker" loading="lazy">
+      <div class="chi-testo">
+        <span class="eyebrow">CHI C'È DIETRO</span>
+        <h2>Danilo Rucchetta</h2>
+        <p>Gioco a poker da oltre vent'anni e dal 2013 studio e gioco i tornei MTT. Per anni ho guardato il gioco solo dal lato dei numeri, e la parte mentale non la vedevo. Lavorarci ha cambiato il mio modo di affrontare il gioco, e da qui la scelta di formarmi e diventare mental coach. Il Mental Game Check è lo strumento che avrei voluto avere allora.</p>
       </div>
     </div>
   </div>
@@ -179,8 +194,9 @@
   <div class="wrap">
     <div style="text-align:center;max-width:640px;margin:0 auto;">
       <h2>Inizia dalla prossima sessione</h2>
-      <p>Il primo passo è una Pre-sessione di pochi minuti, prima di aprire i tavoli. Hai 15 giorni gratuiti per provarlo.</p>
+      <p>Il primo passo è una Pre-sessione di pochi minuti, prima di aprire i tavoli.<br>Hai 15 giorni gratuiti per provarlo.</p>
       <a class="btn btn-primary" style="margin-top:18px;" href="https://mentalgamecheck.com/accesso.html?registrati" target="_blank" rel="noopener">Prova gratis</a>
+      <p class="nessuna-carta-fine">Nessun metodo di pagamento richiesto alla registrazione. Alla fine della prova scegli tu se abbonarti.</p>
     </div>
   </div>
 </section>
