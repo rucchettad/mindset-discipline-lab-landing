@@ -159,6 +159,11 @@
   .hero-meta a:hover .shot img{ filter:none; }
   .btn.btn-hero{ font-size:17px; padding:16px 36px; border-radius:12px;
     box-shadow:0 0 0 5px rgba(88,166,255,.14), 0 0 34px 4px rgba(31,111,235,.45), 0 14px 30px -10px rgba(31,111,235,.7); }
+  /* 23/11: voci 2 sopra e 2 sotto, immagini ingrandibili */
+  @media (min-width:901px){ .hero-meta{ grid-template-columns:repeat(2, 1fr) !important; column-gap:40px !important; row-gap:44px !important; } }
+  .hero-meta .shot{ aspect-ratio:16 / 8.5 !important; cursor:zoom-in; }
+  .hero-meta .shot-link:hover .shot{ transform:translateY(-3px); box-shadow:0 22px 44px -18px rgba(0,0,0,.8), 0 0 50px -12px rgba(31,111,235,.6); }
+  .hero-meta .shot-link:hover .shot img{ filter:none; }
 </style>
 </head>
 <body>
@@ -204,10 +209,10 @@
       </div>
       <p class="hero-offerta"><span>15 giorni di prova gratuita</span> · <span>pochi minuti a sessione</span></p>
       <div class="hero-meta">
-        <div><strong>Pre-sessione</strong>prima di iniziare a giocare<a class="shot-link" href="mental-game-check.html" aria-label="Scopri il Mental Game Check"><span class="shot"><img src="images/screenshot-mental-pre-3.png?v=20261121" alt="Mental Game Check: Pre-sessione" loading="lazy"></span></a></div>
-        <div><strong>In sessione</strong>un check in pausa<a class="shot-link" href="mental-game-check.html" aria-label="Scopri il Mental Game Check"><span class="shot"><img src="images/screenshot-mental-in-3.png?v=20261121" alt="Mental Game Check: check in pausa" loading="lazy"></span></a></div>
-        <div><strong>Post-sessione</strong>per chiudere e ripartire<a class="shot-link" href="mental-game-check.html" aria-label="Scopri il Mental Game Check"><span class="shot"><img src="images/screenshot-mental-post-3.png?v=20261121" alt="Mental Game Check: Post-sessione" loading="lazy"></span></a></div>
-        <div><strong>Diario</strong>per riconoscere ciò che si ripete<a class="shot-link" href="mental-game-check.html" aria-label="Scopri il Mental Game Check"><span class="shot"><img src="images/screenshot-mental-diario-3.png?v=20261121" alt="Mental Game Check: Diario" loading="lazy"></span></a></div>
+        <div><strong>Pre-sessione</strong>prima di iniziare a giocare<span class="shot-link"><span class="shot"><img src="images/screenshot-mental-pre-3.png?v=20261121" alt="Mental Game Check: Pre-sessione" loading="lazy"></span></span></div>
+        <div><strong>In sessione</strong>un check in pausa<span class="shot-link"><span class="shot"><img src="images/screenshot-mental-in-3.png?v=20261121" alt="Mental Game Check: check in pausa" loading="lazy"></span></span></div>
+        <div><strong>Post-sessione</strong>per chiudere e ripartire<span class="shot-link"><span class="shot"><img src="images/screenshot-mental-post-3.png?v=20261121" alt="Mental Game Check: Post-sessione" loading="lazy"></span></span></div>
+        <div><strong>Diario</strong>per riconoscere ciò che si ripete<span class="shot-link"><span class="shot"><img src="images/screenshot-mental-diario-3.png?v=20261121" alt="Mental Game Check: Diario" loading="lazy"></span></span></div>
       </div>
     </div>
   </div>
@@ -358,7 +363,7 @@
   const lightbox = document.getElementById('lightboxOverlay');
   const lightboxImg = document.getElementById('lightboxImg');
 
-  document.querySelectorAll('.screenshot-real img').forEach(img => {
+  document.querySelectorAll('.screenshot-real img, .hero-meta .shot img').forEach(img => {
     img.addEventListener('click', () => {
       lightboxImg.src = img.src;
       lightboxImg.alt = img.alt;
