@@ -176,6 +176,15 @@
             mask-composite:intersect; }
   .foto-mano-dida{ position:absolute; left:0; right:0; bottom:10%; margin:0; padding:0 18px; text-align:center;
     font-family:'DM Serif Display',serif; font-size:24px; color:#e8f1ff; text-shadow:0 2px 12px rgba(0,0,0,.8); }
+  .frase-liberta{ margin:30px 0 10px; font-family:'DM Serif Display',serif; font-style:italic; font-weight:400;
+    font-size:clamp(22px,2.4vw,30px); line-height:1.35; color:#8cc2ff; letter-spacing:.3px;
+    text-shadow:0 0 14px rgba(88,166,255,.35); }
+  .frase-liberta .a-capo-tel{ display:none; }
+  .frase-liberta{ position:relative; width:fit-content; max-width:100%; isolation:isolate; }
+  .frase-liberta::before{ content:''; position:absolute; z-index:-1; left:-10%; right:-10%; top:-110%; bottom:-110%;
+    background:radial-gradient(ellipse 50% 50% at 50% 50%, rgba(88,166,255,.42) 0%, rgba(31,111,235,.26) 40%, rgba(31,111,235,.08) 62%, rgba(31,111,235,0) 78%);
+    filter:blur(10px); pointer-events:none; }
+  @media (max-width:600px){ .frase-liberta{ font-size:19px; letter-spacing:0; } .frase-liberta .a-capo-tel{ display:inline; } }
   @media (max-width:1060px){
     .tilt-grid{ grid-template-columns:1fr; gap:10px; }
     .tilt-ill{ order:2; margin:10px 0 0; }
@@ -251,7 +260,7 @@
       <p style="font-size:19px;color:var(--copper-bright);margin-top:-6px;">Spesso nasce da qualcosa che senti, ma non riconosci.</p>
       <p>Quando si parla di tilt si pensa a tastiere sbattute e scatti d'ira. Ma la rabbia è solo la parte che si vede. Prima della rabbia c'è una mano andata male, il modo in cui la leggiamo e lo stato in cui ci trova: la stanchezza, una giornata storta, una frustrazione che cresce in silenzio.</p>
       <p>Di solito a dare peso a quella mano è l'ego, ed è naturale: in un gioco di competizione pura, dove ci si misura di continuo con gli altri, ogni mano diventa una sfida personale e ogni risultato un giudizio su di sé.</p>
-      <p>Molti la rabbia non la mostrano mai, e a volte l'emozione in gioco è un'altra, anche positiva. Le decisioni però cambiano lo stesso: una value bet lasciata lì, un raise che diventa un call, una 3-bet in più verso chi ci ha appena battuto. Nessuna di queste scelte sembra un errore: è il tilt invisibile, che si traveste da scelta tecnica, da occasione, da coraggio.</p>
+      <p>Molti la rabbia non la mostrano mai, e a volte l'emozione in gioco è perfino positiva, come l'euforia dopo una vincita. Le decisioni però cambiano lo stesso: una value bet lasciata lì, un raise che diventa un call, una 3-bet in più verso chi ci ha appena battuto. Nessuna di queste scelte sembra un errore: è il tilt invisibile, che si traveste da scelta tecnica, da occasione, da coraggio.</p>
       <p>Quello che non esce non sparisce: passa alla sessione successiva, si trasforma in sfiducia e a volte spinge a sabotare proprio ciò che si sta costruendo. Con il tempo, consuma anche la voglia di giocare.</p>
     </div>
     </div>
@@ -262,7 +271,7 @@
         </div>
         <div style="background:rgba(12,18,32,.75);border:1px solid var(--wire);border-radius:12px;padding:18px 18px 16px;">
           <h3 style="margin:0 0 8px;font-size:18px;">L'euforia</h3>
-          <p style="margin:0;opacity:.85;line-height:1.55;font-size:15px;">Dopo una vincita importante ci si sente un passo avanti a tutti: call larghi e bluff forzati sembrano coraggio e lettura del tavolo.</p>
+          <p style="margin:0;opacity:.85;line-height:1.55;font-size:15px;">Dopo un risultato importante ci si sente un passo avanti a tutti: call larghi e bluff forzati sembrano coraggio e lettura del tavolo.</p>
         </div>
         <div style="background:rgba(12,18,32,.75);border:1px solid var(--wire);border-radius:12px;padding:18px 18px 16px;">
           <h3 style="margin:0 0 8px;font-size:18px;">La paura di perdere</h3>
@@ -282,7 +291,8 @@
         </div>
     </div>
     <p style="max-width:760px;margin-top:28px;font-size:17px;line-height:1.6;">L'esperienza e il carattere aiutano, ma non bastano: il tilt colpisce anche chi gioca da anni e sembra calmo in ogni situazione. La lettura più difficile è quella di sé stessi.</p>
-    <p style="max-width:760px;margin-top:14px;font-size:17px;line-height:1.6;">Il Mental Game Check lavora proprio qui. Prima di giocare ti aiuta a riconoscere come stai, nelle pause a notare cosa sta cambiando, alla fine a riflettere e a chiudere la sessione invece di portartela dietro. E nel Diario, sessione dopo sessione, vedi cosa si ripete. <strong>Quando riconosci cosa sta succedendo, la scelta torna a essere tua.</strong></p>
+    <p style="max-width:760px;margin-top:14px;font-size:17px;line-height:1.6;">Il Mental Game Check lavora proprio qui. Prima di giocare ti aiuta a riconoscere come stai, nelle pause a notare cosa sta cambiando, alla fine a riflettere e a chiudere la sessione invece di portartela dietro. E nel Diario, sessione dopo sessione, vedi cosa si ripete.</p>
+    <p class="frase-liberta">Quando riconosci cosa sta succedendo,<br class="a-capo-tel"> la scelta torna a essere tua.</p>
     <!-- 22/11: pulsanti dopo la sezione sul tilt -->
     <div class="hero-ctas" style="margin-top:28px;">
       <a class="btn btn-primary" href="https://mentalgamecheck.com/accesso.html?registrati" target="_blank" rel="noopener">Prova gratis</a>
@@ -298,7 +308,7 @@
   <div class="wrap">
     <div class="statement-inner">
       <p class="statement-lead">Il mental game si allena, come il resto del gioco.</p>
-      <p>Non serve diventare un'altra persona. Servono piccoli gesti, fatti ogni volta che giochi: fermarti un momento prima di iniziare, ascoltarti nelle pause, fare il punto alla fine.</p>
+      <p>Non serve diventare un'altra persona. Servono piccoli gesti, ogni volta che giochi: fermarti un momento prima di iniziare, ascoltarti nelle pause, fare il punto alla fine.</p>
       <p>All'inizio chiedono attenzione e un po' di fatica. Poi diventano abitudine, e si vede: decisioni più lucide, meno sessioni che pesano il giorno dopo, più fiducia nel tuo gioco.</p>
       <p>E sempre più spesso arriva la cosa più preziosa: la testa libera. Sei dentro la mano in corso, le decisioni scorrono e il rumore si spegne. È lo stato di flow, ed è lì che giochi il tuo poker migliore.</p>
     </div>
