@@ -193,7 +193,8 @@
     font-size:clamp(24px, 2.6vw, 30px); color:var(--paper);
     line-height:1.3; margin-bottom:28px;
   }
-  .statement-inner p{ font-size:16.5px; color:var(--muted); margin:0 0 20px; }
+  .statement-inner p{ font-size:16.5px; color:var(--paper); margin:0 0 20px; }
+  .statement-inner .statement-lead{ font-family:'DM Serif Display', serif; font-weight:400; font-size:24px; color:var(--paper); line-height:1.3; margin-bottom:24px; }
   .statement-inner p:last-child{ margin-bottom:0; }
   .statement-inner strong{ color:var(--paper); font-weight:600; }
   .statement-close{
