@@ -31,6 +31,11 @@
   .page-header-price .lancio{ display:inline-block; font-size:12px; font-weight:700; letter-spacing:.6px; text-transform:uppercase; color:#8ec5ff; border:1px solid rgba(88,166,255,.45); background:rgba(31,111,235,.12); border-radius:999px; padding:4px 10px; margin-bottom:10px; }
   .page-header-price .nessuna-carta{ margin:12px 0 0; font-size:13px; line-height:1.5; color:#8ec5ff; opacity:.9; }
   .nessuna-carta-fine{ margin:14px 0 0; font-size:13px; line-height:1.5; color:#8ec5ff; opacity:.9; }
+  /* 23/11: pulsante finale più visibile */
+  .btn.btn-finale{ font-size:18px; padding:18px 44px; margin-top:28px !important; border-radius:12px;
+    box-shadow:0 0 0 6px rgba(88,166,255,.14), 0 0 38px 6px rgba(31,111,235,.45), 0 14px 32px -10px rgba(31,111,235,.7); }
+  .btn.btn-finale:hover{ box-shadow:0 0 0 8px rgba(88,166,255,.18), 0 0 46px 8px rgba(31,111,235,.55), 0 14px 32px -10px rgba(31,111,235,.75); }
+  @media (max-width:600px){ .btn.btn-finale{ display:block; width:100%; max-width:320px; margin-left:auto; margin-right:auto; } }
 </style>
 </head>
 <body>
@@ -195,7 +200,7 @@
     <div style="text-align:center;max-width:640px;margin:0 auto;">
       <h2>Inizia dalla prossima sessione</h2>
       <p>Il primo passo è una Pre-sessione di pochi minuti, prima di aprire i tavoli.<br>Hai 15 giorni gratuiti per provarlo.</p>
-      <a class="btn btn-primary" style="margin-top:18px;" href="https://mentalgamecheck.com/accesso.html?registrati" target="_blank" rel="noopener">Prova gratis</a>
+      <a class="btn btn-primary btn-finale" style="margin-top:18px;" href="https://mentalgamecheck.com/accesso.html?registrati" target="_blank" rel="noopener">Prova gratis</a>
       <p class="nessuna-carta-fine">Nessun metodo di pagamento richiesto alla registrazione. Alla fine della prova scegli tu se abbonarti.</p>
     </div>
   </div>
