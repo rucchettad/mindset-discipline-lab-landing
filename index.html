@@ -164,6 +164,23 @@
   .hero-meta .shot{ aspect-ratio:16 / 8.5 !important; cursor:zoom-in; }
   .hero-meta .shot-link:hover .shot{ transform:translateY(-3px); box-shadow:0 22px 44px -18px rgba(0,0,0,.8), 0 0 50px -12px rgba(31,111,235,.6); }
   .hero-meta .shot-link:hover .shot img{ filter:none; }
+  /* 23/11: foto mano sul mouse nella sezione tilt */
+  .tilt-grid{ display:grid; grid-template-columns:minmax(0,760px) 1fr; gap:40px; align-items:center; }
+  .tilt-ill{ margin:0; order:2; display:flex; justify-content:center; }
+  .tilt-testo{ order:1; }
+  .foto-mano{ position:relative; width:100%; max-width:380px; }
+  .foto-mano img{ display:block; width:100%; height:auto; border-radius:10px;
+    -webkit-mask-image:linear-gradient(to right, transparent, #000 14%, #000 88%, transparent), linear-gradient(to bottom, transparent, #000 14%, #000 84%, transparent);
+    -webkit-mask-composite:source-in;
+            mask-image:linear-gradient(to right, transparent, #000 14%, #000 88%, transparent), linear-gradient(to bottom, transparent, #000 14%, #000 84%, transparent);
+            mask-composite:intersect; }
+  .foto-mano-dida{ position:absolute; left:0; right:0; bottom:10%; margin:0; padding:0 18px; text-align:center;
+    font-family:'DM Serif Display',serif; font-size:24px; color:#e8f1ff; text-shadow:0 2px 12px rgba(0,0,0,.8); }
+  @media (max-width:1060px){
+    .tilt-grid{ grid-template-columns:1fr; gap:10px; }
+    .tilt-ill{ order:2; margin:10px 0 0; }
+    .foto-mano{ max-width:300px; }
+  }
 </style>
 </head>
 <body>
@@ -219,9 +236,16 @@
 </section>
 
 <!-- 21/11 (approvato): sezione IL MENTAL GAME -->
-<section>
+<section class="tilt-sez">
   <div class="wrap">
-    <div style="max-width:760px;">
+    <div class="tilt-grid">
+    <figure class="tilt-ill">
+      <div class="foto-mano">
+        <img src="images/tilt-mano.webp" width="760" height="1013" alt="Una mano ferma sul mouse, al buio, nella luce blu del monitor" loading="lazy">
+        <p class="foto-mano-dida">Da fuori è solo un click.</p>
+      </div>
+    </figure>
+    <div class="tilt-testo" style="max-width:760px;">
       <span class="eyebrow">IL MENTAL GAME</span>
       <h2>Il tilt non fa sempre rumore</h2>
       <p style="font-size:19px;color:var(--copper-bright);margin-top:-6px;">Spesso nasce da qualcosa che senti, ma non riconosci.</p>
@@ -229,6 +253,7 @@
       <p>Di solito a darle peso è l'ego, ed è naturale: in un gioco di competizione pura, dove ci si misura di continuo con gli altri, una mano diventa una sfida personale e un risultato un giudizio su di sé.</p>
       <p>Molti la rabbia non la mostrano mai, e a volte l'emozione in gioco è un'altra, anche positiva. Le decisioni però cambiano lo stesso: una value bet lasciata lì, un raise che diventa un call, una 3-bet in più verso chi ci ha appena battuto. Nessuna di queste scelte sembra un errore: è il tilt invisibile, che si traveste da scelta tecnica, da occasione, da coraggio.</p>
       <p>Quello che non esce non sparisce: passa alla sessione successiva, si trasforma in sfiducia e a volte spinge a sabotare proprio ciò che si sta costruendo. Con il tempo, consuma anche la voglia di giocare.</p>
+    </div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:28px;">
         <div style="background:rgba(12,18,32,.75);border:1px solid var(--wire);border-radius:12px;padding:18px 18px 16px;">
