@@ -459,3 +459,10 @@
 .nav-drop-cta.aperto .nav-drop-menu{ visibility:visible; opacity:1; }
 @media (min-width:1200px){ .nav-drop-cta .nav-drop-btn.nav-cta{ font-size:14px; } }
 @media (max-width:480px){ .nav-drop-cta .nav-drop-btn.nav-cta{ padding:8px 11px; font-size:12px; } }
+
+/* 23/11: sezione «Un laboratorio per il tuo gioco» e link Instagram in «Chi c'è dietro» */
+.section-head p.testo-lab{ color:var(--paper); line-height:1.65; }
+@media (max-width:700px){ .lab-grid.lab-due{ grid-template-columns:1fr !important; } }
+.chi-link{ display:flex; flex-wrap:wrap; gap:12px 22px; margin-top:22px; }
+.chi-link a{ display:inline-flex; align-items:center; gap:8px; color:var(--copper-bright); text-decoration:none; font-size:15px; transition:color .15s; }
+.chi-link a:hover{ color:#8cc2ff; text-decoration:underline; text-underline-offset:3px; }
